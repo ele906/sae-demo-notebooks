@@ -10,14 +10,14 @@
 #SBATCH --output=run_outputs/logs/%x-%j.out
 
 set -euo pipefail
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REPO_ROOT="${SLURM_SUBMIT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 WORKSPACE_ROOT="$(dirname "$REPO_ROOT")"
 cd "$REPO_ROOT"
 export OMP_NUM_THREADS=4
 export MKL_NUM_THREADS=4
 export HF_HOME="$WORKSPACE_ROOT/ReNO/hf_cache"
 export HF_HUB_CACHE="$HF_HOME/hub"
-PYTHON="${SAE_DEMO_PYTHON:-$WORKSPACE_ROOT/el8403/conda-envs/reno/bin/python}"
+PYTHON="${SAE_DEMO_PYTHON:-/n/fs/goose/el8403/conda-envs/reno/bin/python}"
 
 if [[ ! -x "$PYTHON" ]]; then
   echo "Python environment not found: $PYTHON" >&2
