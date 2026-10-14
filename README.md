@@ -12,10 +12,10 @@ Interactive notebooks for image generation, SAE activation inspection, SAE fine-
 
 ## Setup
 
-The notebooks in `generation/` work independently with a CUDA GPU, `torch`, `diffusers`, `safetensors`, `ipywidgets`, and Jupyter. First use downloads the selected Hugging Face model; accept the SDXL Base terms and sign in if Hugging Face asks.
+The notebooks in `generation/` use Jupyter widgets on the cluster login node to submit GPU work with `sbatch`. The SLURM job uses `torch`, `diffusers`, and `safetensors` from `/n/fs/goose/el8403/conda-envs/reno/bin/python`; set `SAE_DEMO_PYTHON` before starting Jupyter if your environment is elsewhere. Model files must be available in the shared Hugging Face cache or downloadable from the compute node. Accept the SDXL Base terms and authenticate if Hugging Face asks.
 
 The three SAE notebooks use the experiment code, SAE package, checkpoints, labels, images, and activation caches from the companion [`ele906/debiasing`](https://github.com/ele906/debiasing) checkout. For this workspace layout, keep this repository at `/n/fs/goose/sae-demo-notebooks` beside the debiasing files in `/n/fs/goose`. If you clone elsewhere, edit the `DEBIASING_ROOT` setting near the top of each SAE notebook. Data, checkpoints, and generated images are not included in this public repository.
 
-Run the SAE notebooks on a CUDA GPU node with the debiasing environment and local artifacts ready. The tuning and suppression notebooks start their existing Python scripts only when you click their run buttons. They do not automatically submit jobs to Slurm.
+Run the SAE notebooks with the debiasing environment and local artifacts ready. The activation notebook uses a CUDA GPU; the tuning and suppression notebooks start their existing Python scripts in the notebook kernel when you click their run buttons, so open those notebooks from a GPU allocation. They do not automatically submit jobs to Slurm.
 
 All notebook outputs are cleared before commit. Run output folders and local model/data artifacts are ignored by Git.

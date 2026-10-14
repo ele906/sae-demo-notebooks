@@ -31,7 +31,8 @@ def load_pipeline(model_name: str):
     if not torch.cuda.is_available():
         raise RuntimeError("A CUDA GPU is required for this notebook in its current setup.")
     dtype = torch.float16
-    kwargs = {"torch_dtype": dtype, "use_safetensors": True}
+    cache_dir = Path(__file__).resolve().parents[2] / "ReNO/hf_cache"
+    kwargs = {"torch_dtype": dtype, "use_safetensors": True, "cache_dir": str(cache_dir)}
     if model_name == "SDXL Turbo":
         kwargs["variant"] = "fp16"
     pipe = AutoPipelineForText2Image.from_pretrained(MODELS[model_name], **kwargs)
@@ -64,8 +65,9 @@ def generate_batch(
     if model_name == "SDXL Turbo":
         # Turbo is distilled for very few steps; use its recommended one-step profile.
         steps, guidance = 1, 0.0
-    stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-    run_dir = Path(output_root) / f"{stamp}_{run_name}"
+    if run_name == "batch":
+        run_name = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    run_dir = Path(output_root) / run_name
     run_dir.mkdir(parents=True, exist_ok=False)
     settings = {
         "model_name": model_name,
