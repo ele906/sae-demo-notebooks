@@ -1,0 +1,13 @@
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+outputs/
+run_outputs/
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
