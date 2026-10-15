@@ -7,6 +7,7 @@ Interactive notebooks for image generation, SAE activation inspection, SAE fine-
 - [`generation/generate_images.ipynb`](generation/generate_images.ipynb): choose SDXL Turbo or SDXL Base, enter a prompt, and generate a seeded batch.
 - [`generation/compare_models.ipynb`](generation/compare_models.ipynb): compare both models on the same prompt.
 - [`sae-activation/inspect_spatial_activations.ipynb`](sae-activation/inspect_spatial_activations.ipynb): overlay one SAE unit's spatial activation on a generated image and optionally show its C2C box.
+- [`sae-activation/mean_activations_by_race.ipynb`](sae-activation/mean_activations_by_race.ipynb): rank the top ten SAE features by mean activation within each race group on the open-prompt portrait dataset, then compare those features across race groups.
 - [`sae-tuning/fine_tune_box_sae.ipynb`](sae-tuning/fine_tune_box_sae.ipynb): configure and launch the existing C2C box-supervised SAE fine-tuning script.
 - [`sae-feature-suppression/suppress_features.ipynb`](sae-feature-suppression/suppress_features.ipynb): configure and launch the existing feature-ablation comparison, including no-op strengths and a random control.
 
@@ -15,6 +16,8 @@ Interactive notebooks for image generation, SAE activation inspection, SAE fine-
 The notebooks in `generation/` use Jupyter widgets on the cluster login node to submit GPU work with `sbatch`. The SLURM job uses `torch`, `diffusers`, and `safetensors` from `/n/fs/goose/el8403/conda-envs/reno/bin/python`; set `SAE_DEMO_PYTHON` before starting Jupyter if your environment is elsewhere. Model files must be available in the shared Hugging Face cache or downloadable from the compute node. Accept the SDXL Base terms and authenticate if Hugging Face asks.
 
 The three SAE notebooks use the experiment code, SAE package, checkpoints, labels, images, and activation caches from the companion [`ele906/debiasing`](https://github.com/ele906/debiasing) checkout. For this workspace layout, keep this repository at `/n/fs/goose/sae-demo-notebooks` beside the debiasing files in `/n/fs/goose`. If you clone elsewhere, edit the `DEBIASING_ROOT` setting near the top of each SAE notebook. Data, checkpoints, and generated images are not included in this public repository.
+
+The mean-activation notebook uses the 1,200 simple-prompt images (`a picture of a {race} {gender}`) and their cached spatial-mean activations. It pools genders within each race, ranks features on the full dataset for this descriptive chart, and compares each race's top features across all race groups. The result is descriptive prompt-group association, not evidence of semantic meaning or causation.
 
 Run the SAE notebooks with the debiasing environment and local artifacts ready. The activation notebook uses a CUDA GPU; the tuning and suppression notebooks start their existing Python scripts in the notebook kernel when you click their run buttons, so open those notebooks from a GPU allocation. They do not automatically submit jobs to Slurm.
 
