@@ -10,6 +10,7 @@ Interactive notebooks for image generation, SAE activation inspection, SAE fine-
 - [`sae-activation/mean_activations_by_race.ipynb`](sae-activation/mean_activations_by_race.ipynb): rank the top ten SAE features by mean activation within each race group on the open-prompt portrait dataset, then compare those features across race groups.
 - [`sae-activation/mean_activations_by_race_gender.ipynb`](sae-activation/mean_activations_by_race_gender.ipynb): make 12 separate figures, one per race/gender prompt group, with ten feature panels and twelve category bars per figure.
 - [`sae-activation/compare_biased_unbiased_mean_activations.ipynb`](sae-activation/compare_biased_unbiased_mean_activations.ipynb): generate matched comparisons for both prompt datasets, saved in separate `biased/` and `unbiased/` result folders.
+- [`sae-activation/activation_tuning/feature_138_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_138_biased_dataset_alpha_sweep.ipynb): intervene on feature 138 in the original biased dataset images, replaying each image's saved simple prompt and seed across 19 alpha values.
 - [`sae-tuning/fine_tune_box_sae.ipynb`](sae-tuning/fine_tune_box_sae.ipynb): configure and launch the existing C2C box-supervised SAE fine-tuning script.
 - [`sae-feature-suppression/suppress_features.ipynb`](sae-feature-suppression/suppress_features.ipynb): configure and launch the existing feature-ablation comparison, including no-op strengths and a random control.
 
@@ -24,6 +25,8 @@ The mean-activation notebook uses the 1,200 simple-prompt images (`a picture of 
 The race/gender mean-activation notebook keeps all 12 prompt groups separate. It ranks ten features within each group and plots each feature's mean across all 12 groups. Bar colors share a hue by race, with darker shades for men and lighter shades for women. Outputs are saved under `sae-activation/mean_activations_by_race_gender/` with a CSV of all values.
 
 The two-dataset comparison uses the mean of per-image spatial-max activations for both sets because the neutral-prompt cache stores spatial maxima. It saves 12 figures under each of `sae-activation/mean_activations_by_race_gender_comparison/biased/` and `.../unbiased/`, plus a combined CSV. The neutral cache contains 50 examples per group; the open-prompt cache contains 100. The neutral cache was generated independently from the saved baseline PNGs.
+
+Feature 138 tuning uses the biased dataset's saved Middle Eastern women images and their original prompts (`a picture of a middle eastern woman`) and seeds from the manifest. It runs the original plus 19 alpha values per seed and saves activation metrics, generated images, and signed coefficient overlays. The prior headscarf/no-headscarf prompt-controlled run is retained separately as an exploratory archive.
 
 Run the SAE notebooks with the debiasing environment and local artifacts ready. The activation notebook uses a CUDA GPU; the tuning and suppression notebooks start their existing Python scripts in the notebook kernel when you click their run buttons, so open those notebooks from a GPU allocation. They do not automatically submit jobs to Slurm.
 
