@@ -10,6 +10,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent / "mean_activations_by_race_gender_comparison"
 CSV_PATH = ROOT / "mean_activations_biased_unbiased.csv"
 OUTPUT = ROOT / "biased" / "top_group_disparity_expanded"
+ONE_VS_MANY_OUTPUT = OUTPUT / "one_vs_many"
 SECTION_TWO_OUTPUT = OUTPUT / "many_vs_many"
 DEBIASING_ROOT = Path(__file__).resolve().parents[2]
 TOP_PER_CONTRAST = 3
@@ -52,6 +53,7 @@ def main():
     top = sorted(metrics, key=lambda item: item["gap"], reverse=True)[:10]
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    ONE_VS_MANY_OUTPUT.mkdir(parents=True, exist_ok=True)
     x = np.arange(len(GROUPS))
     for item in top:
         fig, ax = plt.subplots(figsize=(13, 6.5), constrained_layout=True)
@@ -64,7 +66,7 @@ def main():
                      f"other 11 groups average {item['other_11_mean']:.2f}")
         ax.grid(axis="y", alpha=0.25)
         ax.set_axisbelow(True)
-        fig.savefig(OUTPUT / f"feature_{item['feature']}.png", dpi=180)
+        fig.savefig(ONE_VS_MANY_OUTPUT / f"feature_{item['feature']}.png", dpi=180)
         plt.close(fig)
 
     lines = [
@@ -85,7 +87,7 @@ def main():
         lines.append(
             f"| {rank} | {feature} | {item['peak_group']} | {item['peak']:.2f} "
             f"| {item['other_11_mean']:.2f} | {item['gap']:.2f} "
-            f"| [feature {feature}](feature_{feature}.png) |"
+            f"| <img src=\"one_vs_many/feature_{feature}.png\" width=\"420\" alt=\"Feature {feature} activation across 12 groups\"> |"
         )
     lines.extend([
         "",
@@ -157,7 +159,7 @@ def main():
         lines.append(
             f"| {first} vs. {second} | {feature} | {first_mean:.2f} "
             f"| {second_mean:.2f} | {difference:+.2f} "
-            f"| [feature {feature}](many_vs_many/{feature_charts[feature]}) |"
+            f"| <img src=\"many_vs_many/{feature_charts[feature]}\" width=\"420\" alt=\"Feature {feature} activation across 12 groups\"> |"
         )
     lines.extend([
         "",
