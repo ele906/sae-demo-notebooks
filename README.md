@@ -2,6 +2,8 @@
 
 Interactive notebooks for image generation, SAE activation inspection, SAE fine-tuning, and feature suppression.
 
+See the [static SAE Explorer](demo/) for a browser-based feature activation and intervention demo. It uses saved experiment outputs and does not load a diffusion model in the browser.
+
 ## Notebooks
 
 - [`generation/generate_images.ipynb`](generation/generate_images.ipynb): choose SDXL Turbo or SDXL Base, enter a prompt, and generate a seeded batch.

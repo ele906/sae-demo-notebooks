@@ -11,3 +11,7 @@ run_outputs/
 *.pt
 *.pth
 *.safetensors
+
+# The static Pages demo uses committed, generated portrait assets.
+!demo/assets/
+!demo/assets/**

@@ -1,0 +1,532 @@
+{
+  "feature": 3884,
+  "alphas": [
+    -75,
+    -50,
+    -30,
+    -20,
+    -15,
+    -10,
+    -7,
+    -5,
+    -3,
+    0,
+    3,
+    5,
+    7,
+    10,
+    15,
+    20,
+    30,
+    50,
+    75
+  ],
+  "groups": [
+    {
+      "id": "hispanic_woman",
+      "label": "Hispanic women",
+      "metrics": {
+        "-75": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 31.05849142074585
+        },
+        "-50": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 26.547952032089235
+        },
+        "-30": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 19.861785650253296
+        },
+        "-20": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 16.925220084190368
+        },
+        "-15": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 14.921256422996521
+        },
+        "-10": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 11.349072754383087
+        },
+        "-7": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 8.612770295143127
+        },
+        "-5": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 6.731980592012405
+        },
+        "-3": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 4.967897242307663
+        },
+        "0": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 2.128620484471321
+        },
+        "3": {
+          "activation": 7.5542720556259155,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 9.463968440890312
+        },
+        "5": {
+          "activation": 12.570413041114808,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 18.171543180942535
+        },
+        "7": {
+          "activation": 17.58658149242401,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 23.394756698608397
+        },
+        "10": {
+          "activation": 25.110799980163574,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 27.18403639793396
+        },
+        "15": {
+          "activation": 37.65117249488831,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 29.74499158859253
+        },
+        "20": {
+          "activation": 50.19164981842041,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 31.050367641448975
+        },
+        "30": {
+          "activation": 75.27236909866333,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 33.12668361663818
+        },
+        "50": {
+          "activation": 125.43396186828613,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 35.60477247238159
+        },
+        "75": {
+          "activation": 188.13575744628906,
+          "activeFraction": 0.1783203125,
+          "pixelMae": 37.76050987243652
+        }
+      }
+    },
+    {
+      "id": "hispanic_man",
+      "label": "Hispanic men",
+      "metrics": {
+        "-75": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 21.572053265571594
+        },
+        "-50": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 16.45337356328964
+        },
+        "-30": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 11.643791615962982
+        },
+        "-20": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 9.44487006664276
+        },
+        "-15": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 8.074793940782547
+        },
+        "-10": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 5.998524552583694
+        },
+        "-7": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 4.422833332419396
+        },
+        "-5": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 3.4208280712366106
+        },
+        "-3": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 2.5326703906059267
+        },
+        "0": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 1.185236157476902
+        },
+        "3": {
+          "activation": 2.451355917751789,
+          "activeFraction": 0.065625,
+          "pixelMae": 3.7018193930387495
+        },
+        "5": {
+          "activation": 4.079089757800102,
+          "activeFraction": 0.065625,
+          "pixelMae": 8.974436098337174
+        },
+        "7": {
+          "activation": 5.706841653585434,
+          "activeFraction": 0.065625,
+          "pixelMae": 13.214248132705688
+        },
+        "10": {
+          "activation": 8.148440754413604,
+          "activeFraction": 0.065625,
+          "pixelMae": 16.95936886072159
+        },
+        "15": {
+          "activation": 12.217762893438339,
+          "activeFraction": 0.065625,
+          "pixelMae": 20.79256937503815
+        },
+        "20": {
+          "activation": 16.287093555927278,
+          "activeFraction": 0.065625,
+          "pixelMae": 22.944842195510866
+        },
+        "30": {
+          "activation": 24.425814604759218,
+          "activeFraction": 0.065625,
+          "pixelMae": 26.03378438949585
+        },
+        "50": {
+          "activation": 40.703142857551576,
+          "activeFraction": 0.065625,
+          "pixelMae": 30.13307943344116
+        },
+        "75": {
+          "activation": 61.049853515625,
+          "activeFraction": 0.065625,
+          "pixelMae": 33.16471633911133
+        }
+      }
+    },
+    {
+      "id": "black_woman",
+      "label": "Black women",
+      "metrics": {
+        "-75": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.1857128143310547
+        },
+        "-50": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.09195263981819153
+        },
+        "-30": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.06538403630256653
+        },
+        "-20": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.05082022547721863
+        },
+        "-15": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.04216817319393158
+        },
+        "-10": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.031196784973144532
+        },
+        "-7": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.02590382993221283
+        },
+        "-5": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.02283986359834671
+        },
+        "-3": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.020360565185546874
+        },
+        "0": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.019387944042682646
+        },
+        "3": {
+          "activation": 0.004810991510748863,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.018010647594928743
+        },
+        "5": {
+          "activation": 0.008005291223526001,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.020713424682617186
+        },
+        "7": {
+          "activation": 0.011200430244207383,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.022829119861125947
+        },
+        "10": {
+          "activation": 0.01599273830652237,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.027698072791099548
+        },
+        "15": {
+          "activation": 0.02397976368665695,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.044703102111816405
+        },
+        "20": {
+          "activation": 0.031967005133628844,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.08184693455696106
+        },
+        "30": {
+          "activation": 0.04794040322303772,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.1672147750854492
+        },
+        "50": {
+          "activation": 0.07988871335983276,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.2821629762649536
+        },
+        "75": {
+          "activation": 0.11982755661010742,
+          "activeFraction": 0.0001953125,
+          "pixelMae": 0.29197914600372316
+        }
+      }
+    },
+    {
+      "id": "white_man",
+      "label": "White men",
+      "metrics": {
+        "-75": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 14.496307080984115
+        },
+        "-50": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 10.138632601499557
+        },
+        "-30": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 6.767655834555626
+        },
+        "-20": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 5.126720243692398
+        },
+        "-15": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 4.215383484959602
+        },
+        "-10": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 3.0358920246362686
+        },
+        "-7": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 2.1992377758026125
+        },
+        "-5": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 1.7049401491880416
+        },
+        "-3": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 1.2735669553279876
+        },
+        "0": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.6740653350949287
+        },
+        "3": {
+          "activation": 1.2891200631856918,
+          "activeFraction": 0.033203125,
+          "pixelMae": 1.2931779846549034
+        },
+        "5": {
+          "activation": 2.1451010845601557,
+          "activeFraction": 0.033203125,
+          "pixelMae": 3.5914065331220626
+        },
+        "7": {
+          "activation": 3.0011090241372584,
+          "activeFraction": 0.033203125,
+          "pixelMae": 6.972153523564339
+        },
+        "10": {
+          "activation": 4.28510511815548,
+          "activeFraction": 0.033203125,
+          "pixelMae": 11.136753180623055
+        },
+        "15": {
+          "activation": 6.425099791586399,
+          "activeFraction": 0.033203125,
+          "pixelMae": 14.67929590344429
+        },
+        "20": {
+          "activation": 8.565071433782578,
+          "activeFraction": 0.033203125,
+          "pixelMae": 16.094784688949584
+        },
+        "30": {
+          "activation": 12.845021313428878,
+          "activeFraction": 0.033203125,
+          "pixelMae": 18.18331249952316
+        },
+        "50": {
+          "activation": 21.40494726896286,
+          "activeFraction": 0.033203125,
+          "pixelMae": 21.489483761787415
+        },
+        "75": {
+          "activation": 32.10482728481293,
+          "activeFraction": 0.033203125,
+          "pixelMae": 24.094721508026122
+        }
+      }
+    },
+    {
+      "id": "white_woman",
+      "label": "White women",
+      "metrics": {
+        "-75": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 2.5682957410812377
+        },
+        "-50": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 1.9498793303966522
+        },
+        "-30": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 1.2762953847646714
+        },
+        "-20": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.841959747672081
+        },
+        "-15": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.6196090027689933
+        },
+        "-10": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.4152354672551155
+        },
+        "-7": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.32577921599149706
+        },
+        "-5": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.27928599864244463
+        },
+        "-3": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.23863448947668076
+        },
+        "0": {
+          "activation": 0.0,
+          "activeFraction": 0.0,
+          "pixelMae": 0.16285273283720017
+        },
+        "3": {
+          "activation": 0.12498804293572903,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 0.28077634125947953
+        },
+        "5": {
+          "activation": 0.20797810927033425,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 0.708716644346714
+        },
+        "7": {
+          "activation": 0.29096974432468414,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 1.301345956325531
+        },
+        "10": {
+          "activation": 0.4154584124684334,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 2.250113235414028
+        },
+        "15": {
+          "activation": 0.6229404121637344,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 2.7777315109968184
+        },
+        "20": {
+          "activation": 0.830419996380806,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 3.3199904382228853
+        },
+        "30": {
+          "activation": 1.2453765720129013,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 3.81924455165863
+        },
+        "50": {
+          "activation": 2.0753017365932465,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 4.2791935205459595
+        },
+        "75": {
+          "activation": 3.112745702266693,
+          "activeFraction": 0.0033203125,
+          "pixelMae": 4.395123410224914
+        }
+      }
+    }
+  ],
+  "imageNote": "Portraits show seed 0; metrics are means across 20 seeds per group."
+}

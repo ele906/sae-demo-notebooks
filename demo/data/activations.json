@@ -1,0 +1,696 @@
+{
+  "groups": [
+    {
+      "id": "black_man",
+      "label": "Black men"
+    },
+    {
+      "id": "black_woman",
+      "label": "Black women"
+    },
+    {
+      "id": "white_man",
+      "label": "White men"
+    },
+    {
+      "id": "white_woman",
+      "label": "White women"
+    },
+    {
+      "id": "east_asian_man",
+      "label": "East Asian men"
+    },
+    {
+      "id": "east_asian_woman",
+      "label": "East Asian women"
+    },
+    {
+      "id": "middle_eastern_man",
+      "label": "Middle Eastern men"
+    },
+    {
+      "id": "middle_eastern_woman",
+      "label": "Middle Eastern women"
+    },
+    {
+      "id": "indian_man",
+      "label": "Indian men"
+    },
+    {
+      "id": "indian_woman",
+      "label": "Indian women"
+    },
+    {
+      "id": "hispanic_man",
+      "label": "Hispanic men"
+    },
+    {
+      "id": "hispanic_woman",
+      "label": "Hispanic women"
+    }
+  ],
+  "means": {
+    "1664": {
+      "black_man": 45.99259948730469,
+      "black_woman": 18.11020851135254,
+      "white_man": 50.00046920776367,
+      "white_woman": 19.173091888427734,
+      "east_asian_man": 46.30147933959961,
+      "east_asian_woman": 22.372529983520508,
+      "middle_eastern_man": 42.5007438659668,
+      "middle_eastern_woman": 14.024008750915527,
+      "indian_man": 47.6866340637207,
+      "indian_woman": 28.819982528686523,
+      "hispanic_man": 46.9637451171875,
+      "hispanic_woman": 20.644983291625977
+    },
+    "3459": {
+      "black_man": 0.20629557967185974,
+      "black_woman": 3.241314649581909,
+      "white_man": 0.0,
+      "white_woman": 0.0,
+      "east_asian_man": 11.735816955566406,
+      "east_asian_woman": 17.073549270629883,
+      "middle_eastern_man": 22.365089416503906,
+      "middle_eastern_woman": 29.67673110961914,
+      "indian_man": 26.23773765563965,
+      "indian_woman": 34.84225845336914,
+      "hispanic_man": 6.241147041320801,
+      "hispanic_woman": 14.670145034790039
+    },
+    "5001": {
+      "black_man": 32.846004486083984,
+      "black_woman": 23.047304153442383,
+      "white_man": 30.810670852661133,
+      "white_woman": 23.896154403686523,
+      "east_asian_man": 30.75861167907715,
+      "east_asian_woman": 27.583486557006836,
+      "middle_eastern_man": 31.65945816040039,
+      "middle_eastern_woman": 22.318862915039062,
+      "indian_man": 30.332656860351562,
+      "indian_woman": 22.047954559326172,
+      "hispanic_man": 28.630535125732422,
+      "hispanic_woman": 21.8980712890625
+    },
+    "138": {
+      "black_man": 0.0,
+      "black_woman": 0.0,
+      "white_man": 0.0,
+      "white_woman": 0.24011054635047913,
+      "east_asian_man": 0.0,
+      "east_asian_woman": 0.11867956072092056,
+      "middle_eastern_man": 42.489044189453125,
+      "middle_eastern_woman": 60.544898986816406,
+      "indian_man": 5.088553428649902,
+      "indian_woman": 24.342073440551758,
+      "hispanic_man": 0.0,
+      "hispanic_woman": 0.662865161895752
+    },
+    "11": {
+      "black_man": 31.24551773071289,
+      "black_woman": 28.497947692871094,
+      "white_man": 29.85118865966797,
+      "white_woman": 31.530662536621094,
+      "east_asian_man": 31.914793014526367,
+      "east_asian_woman": 27.553319931030273,
+      "middle_eastern_man": 28.76134490966797,
+      "middle_eastern_woman": 23.590290069580078,
+      "indian_man": 31.609333038330078,
+      "indian_woman": 27.892309188842773,
+      "hispanic_man": 29.292531967163086,
+      "hispanic_woman": 27.002826690673828
+    },
+    "3593": {
+      "black_man": 28.0274658203125,
+      "black_woman": 19.91151237487793,
+      "white_man": 22.645139694213867,
+      "white_woman": 16.372894287109375,
+      "east_asian_man": 23.332246780395508,
+      "east_asian_woman": 19.03826904296875,
+      "middle_eastern_man": 28.133949279785156,
+      "middle_eastern_woman": 31.99199676513672,
+      "indian_man": 24.473222732543945,
+      "indian_woman": 23.951583862304688,
+      "hispanic_man": 24.943593978881836,
+      "hispanic_woman": 21.61893081665039
+    },
+    "3725": {
+      "black_man": 0.0,
+      "black_woman": 0.9719613790512085,
+      "white_man": 0.0,
+      "white_woman": 0.0,
+      "east_asian_man": 3.0358779430389404,
+      "east_asian_woman": 22.892000198364258,
+      "middle_eastern_man": 10.485443115234375,
+      "middle_eastern_woman": 26.605484008789062,
+      "indian_man": 18.915254592895508,
+      "indian_woman": 46.130367279052734,
+      "hispanic_man": 0.6431260704994202,
+      "hispanic_woman": 19.84189224243164
+    },
+    "3722": {
+      "black_man": 10.994821548461914,
+      "black_woman": 14.848396301269531,
+      "white_man": 0.5379576683044434,
+      "white_woman": 0.0,
+      "east_asian_man": 17.881969451904297,
+      "east_asian_woman": 18.680139541625977,
+      "middle_eastern_man": 11.75929069519043,
+      "middle_eastern_woman": 13.033025741577148,
+      "indian_man": 24.966968536376953,
+      "indian_woman": 25.279016494750977,
+      "hispanic_man": 11.55325698852539,
+      "hispanic_woman": 16.521804809570312
+    },
+    "527": {
+      "black_man": 47.934814453125,
+      "black_woman": 58.08736801147461,
+      "white_man": 8.538360595703125,
+      "white_woman": 12.991926193237305,
+      "east_asian_man": 5.398971080780029,
+      "east_asian_woman": 8.28178882598877,
+      "middle_eastern_man": 0.07998308539390564,
+      "middle_eastern_woman": 0.5958543419837952,
+      "indian_man": 13.389931678771973,
+      "indian_woman": 14.815382957458496,
+      "hispanic_man": 18.161205291748047,
+      "hispanic_woman": 23.609088897705078
+    },
+    "2707": {
+      "black_man": 23.091625213623047,
+      "black_woman": 11.384295463562012,
+      "white_man": 29.599279403686523,
+      "white_woman": 10.9468412399292,
+      "east_asian_man": 18.796344757080078,
+      "east_asian_woman": 9.946337699890137,
+      "middle_eastern_man": 13.621973991394043,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 18.851808547973633,
+      "indian_woman": 3.367494583129883,
+      "hispanic_man": 22.676254272460938,
+      "hispanic_woman": 6.863630294799805
+    },
+    "1563": {
+      "black_man": 26.600923538208008,
+      "black_woman": 20.496889114379883,
+      "white_man": 28.304763793945312,
+      "white_woman": 11.758740425109863,
+      "east_asian_man": 38.34690475463867,
+      "east_asian_woman": 32.2705192565918,
+      "middle_eastern_man": 0.12888672947883606,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 11.776470184326172,
+      "indian_woman": 12.978211402893066,
+      "hispanic_man": 27.925111770629883,
+      "hispanic_woman": 6.916934967041016
+    },
+    "669": {
+      "black_man": 15.322105407714844,
+      "black_woman": 21.777023315429688,
+      "white_man": 0.0,
+      "white_woman": 0.23329339921474457,
+      "east_asian_man": 13.574875831604004,
+      "east_asian_woman": 22.169965744018555,
+      "middle_eastern_man": 60.82041931152344,
+      "middle_eastern_woman": 54.93699264526367,
+      "indian_man": 54.37531280517578,
+      "indian_woman": 56.425071716308594,
+      "hispanic_man": 18.78573989868164,
+      "hispanic_woman": 31.036090850830078
+    },
+    "546": {
+      "black_man": 2.369983196258545,
+      "black_woman": 8.535265922546387,
+      "white_man": 15.037405967712402,
+      "white_woman": 36.93513107299805,
+      "east_asian_man": 18.451858520507812,
+      "east_asian_woman": 26.191503524780273,
+      "middle_eastern_man": 23.105239868164062,
+      "middle_eastern_woman": 34.85321807861328,
+      "indian_man": 18.072473526000977,
+      "indian_woman": 24.915376663208008,
+      "hispanic_man": 16.350704193115234,
+      "hispanic_woman": 39.80552291870117
+    },
+    "3884": {
+      "black_man": 0.40649792551994324,
+      "black_woman": 0.8589013814926147,
+      "white_man": 17.434415817260742,
+      "white_woman": 4.385797500610352,
+      "east_asian_man": 0.0,
+      "east_asian_woman": 0.0,
+      "middle_eastern_man": 0.0,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 0.0,
+      "indian_woman": 0.0,
+      "hispanic_man": 19.988279342651367,
+      "hispanic_woman": 29.555627822875977
+    },
+    "4781": {
+      "black_man": 32.73220443725586,
+      "black_woman": 34.719749450683594,
+      "white_man": 34.1327018737793,
+      "white_woman": 35.364994049072266,
+      "east_asian_man": 31.31817626953125,
+      "east_asian_woman": 30.44501304626465,
+      "middle_eastern_man": 36.480140686035156,
+      "middle_eastern_woman": 39.38983917236328,
+      "indian_man": 35.145877838134766,
+      "indian_woman": 33.86207580566406,
+      "hispanic_man": 37.69248580932617,
+      "hispanic_woman": 34.310001373291016
+    },
+    "433": {
+      "black_man": 0.10470908135175705,
+      "black_woman": 6.4094109535217285,
+      "white_man": 2.647545099258423,
+      "white_woman": 44.534934997558594,
+      "east_asian_man": 0.7054424285888672,
+      "east_asian_woman": 5.7545485496521,
+      "middle_eastern_man": 23.50741195678711,
+      "middle_eastern_woman": 15.942255973815918,
+      "indian_man": 21.903831481933594,
+      "indian_woman": 12.531383514404297,
+      "hispanic_man": 12.769654273986816,
+      "hispanic_woman": 29.424245834350586
+    },
+    "2611": {
+      "black_man": 3.0525100231170654,
+      "black_woman": 33.41163635253906,
+      "white_man": 7.398253917694092,
+      "white_woman": 46.69681167602539,
+      "east_asian_man": 19.312759399414062,
+      "east_asian_woman": 36.842098236083984,
+      "middle_eastern_man": 13.861347198486328,
+      "middle_eastern_woman": 37.61904525756836,
+      "indian_man": 4.2096734046936035,
+      "indian_woman": 28.534822463989258,
+      "hispanic_man": 11.034143447875977,
+      "hispanic_woman": 37.745338439941406
+    },
+    "3764": {
+      "black_man": 9.970562934875488,
+      "black_woman": 32.023651123046875,
+      "white_man": 1.2769602537155151,
+      "white_woman": 33.778968811035156,
+      "east_asian_man": 6.707026958465576,
+      "east_asian_woman": 22.12835121154785,
+      "middle_eastern_man": 0.09058236330747604,
+      "middle_eastern_woman": 2.3115599155426025,
+      "indian_man": 0.0,
+      "indian_woman": 7.559471607208252,
+      "hispanic_man": 13.200738906860352,
+      "hispanic_woman": 29.847993850708008
+    },
+    "2230": {
+      "black_man": 23.851974487304688,
+      "black_woman": 32.676658630371094,
+      "white_man": 20.164268493652344,
+      "white_woman": 18.405712127685547,
+      "east_asian_man": 21.83539581298828,
+      "east_asian_woman": 30.469667434692383,
+      "middle_eastern_man": 15.778633117675781,
+      "middle_eastern_woman": 16.615249633789062,
+      "indian_man": 17.578157424926758,
+      "indian_woman": 23.827098846435547,
+      "hispanic_man": 20.29022979736328,
+      "hispanic_woman": 24.85747718811035
+    },
+    "5046": {
+      "black_man": 31.787988662719727,
+      "black_woman": 22.412240982055664,
+      "white_man": 29.382469177246094,
+      "white_woman": 21.260032653808594,
+      "east_asian_man": 35.592926025390625,
+      "east_asian_woman": 28.705968856811523,
+      "middle_eastern_man": 27.436384201049805,
+      "middle_eastern_woman": 22.787120819091797,
+      "indian_man": 33.237064361572266,
+      "indian_woman": 28.004541397094727,
+      "hispanic_man": 30.371532440185547,
+      "hispanic_woman": 23.933704376220703
+    },
+    "2486": {
+      "black_man": 0.0,
+      "black_woman": 0.42870545387268066,
+      "white_man": 0.0,
+      "white_woman": 0.0,
+      "east_asian_man": 2.340174913406372,
+      "east_asian_woman": 1.0204273462295532,
+      "middle_eastern_man": 27.846778869628906,
+      "middle_eastern_woman": 42.601463317871094,
+      "indian_man": 20.096458435058594,
+      "indian_woman": 22.733705520629883,
+      "hispanic_man": 0.0,
+      "hispanic_woman": 1.6909652948379517
+    },
+    "1600": {
+      "black_man": 7.940422534942627,
+      "black_woman": 13.531861305236816,
+      "white_man": 14.673954010009766,
+      "white_woman": 20.340957641601562,
+      "east_asian_man": 28.58185386657715,
+      "east_asian_woman": 32.54879379272461,
+      "middle_eastern_man": 32.53371810913086,
+      "middle_eastern_woman": 29.266874313354492,
+      "indian_man": 32.72239685058594,
+      "indian_woman": 30.838266372680664,
+      "hispanic_man": 22.516199111938477,
+      "hispanic_woman": 28.964380264282227
+    },
+    "452": {
+      "black_man": 38.58759307861328,
+      "black_woman": 0.0,
+      "white_man": 35.39423751831055,
+      "white_woman": 0.0,
+      "east_asian_man": 18.175945281982422,
+      "east_asian_woman": 0.0,
+      "middle_eastern_man": 66.45478057861328,
+      "middle_eastern_woman": 3.7462711334228516,
+      "indian_man": 64.42603302001953,
+      "indian_woman": 1.142078161239624,
+      "hispanic_man": 45.51438522338867,
+      "hispanic_woman": 0.0
+    },
+    "199": {
+      "black_man": 6.3247880935668945,
+      "black_woman": 0.10541576147079468,
+      "white_man": 7.483089447021484,
+      "white_woman": 0.0,
+      "east_asian_man": 15.616961479187012,
+      "east_asian_woman": 5.457192897796631,
+      "middle_eastern_man": 14.502422332763672,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 18.909072875976562,
+      "indian_woman": 0.0,
+      "hispanic_man": 31.193017959594727,
+      "hispanic_woman": 27.26861000061035
+    },
+    "2250": {
+      "black_man": 0.0,
+      "black_woman": 19.84149742126465,
+      "white_man": 0.0,
+      "white_woman": 31.758411407470703,
+      "east_asian_man": 0.5763291120529175,
+      "east_asian_woman": 23.22421646118164,
+      "middle_eastern_man": 0.23282437026500702,
+      "middle_eastern_woman": 16.087404251098633,
+      "indian_man": 0.3064039945602417,
+      "indian_woman": 13.65584945678711,
+      "hispanic_man": 2.358635663986206,
+      "hispanic_woman": 35.322689056396484
+    },
+    "3279": {
+      "black_man": 12.960738182067871,
+      "black_woman": 63.69846725463867,
+      "white_man": 6.984653472900391,
+      "white_woman": 26.493833541870117,
+      "east_asian_man": 1.0747401714324951,
+      "east_asian_woman": 0.0,
+      "middle_eastern_man": 0.0773165225982666,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 0.5932427048683167,
+      "indian_woman": 0.0,
+      "hispanic_man": 16.240564346313477,
+      "hispanic_woman": 23.717374801635742
+    },
+    "3669": {
+      "black_man": 39.906524658203125,
+      "black_woman": 34.760459899902344,
+      "white_man": 25.75374984741211,
+      "white_woman": 25.3242244720459,
+      "east_asian_man": 20.884653091430664,
+      "east_asian_woman": 12.845666885375977,
+      "middle_eastern_man": 19.284221649169922,
+      "middle_eastern_woman": 19.25374412536621,
+      "indian_man": 21.608600616455078,
+      "indian_woman": 15.098528861999512,
+      "hispanic_man": 25.288780212402344,
+      "hispanic_woman": 27.20732879638672
+    },
+    "1237": {
+      "black_man": 38.518314361572266,
+      "black_woman": 32.225406646728516,
+      "white_man": 41.7021598815918,
+      "white_woman": 35.177005767822266,
+      "east_asian_man": 31.494909286499023,
+      "east_asian_woman": 24.252708435058594,
+      "middle_eastern_man": 31.538223266601562,
+      "middle_eastern_woman": 32.03285598754883,
+      "indian_man": 33.140621185302734,
+      "indian_woman": 33.759925842285156,
+      "hispanic_man": 37.246788024902344,
+      "hispanic_woman": 32.792259216308594
+    },
+    "1759": {
+      "black_man": 0.0,
+      "black_woman": 0.0,
+      "white_man": 0.0,
+      "white_woman": 0.0,
+      "east_asian_man": 23.88665771484375,
+      "east_asian_woman": 32.24101638793945,
+      "middle_eastern_man": 0.0,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 0.0,
+      "indian_woman": 0.0,
+      "hispanic_man": 0.0,
+      "hispanic_woman": 0.0
+    },
+    "2527": {
+      "black_man": 0.0,
+      "black_woman": 4.899855136871338,
+      "white_man": 0.0,
+      "white_woman": 0.5156369805335999,
+      "east_asian_man": 2.1166296005249023,
+      "east_asian_woman": 21.980714797973633,
+      "middle_eastern_man": 13.545705795288086,
+      "middle_eastern_woman": 19.681564331054688,
+      "indian_man": 24.885391235351562,
+      "indian_woman": 43.78337097167969,
+      "hispanic_man": 1.2997997999191284,
+      "hispanic_woman": 20.388463973999023
+    },
+    "1257": {
+      "black_man": 29.481595993041992,
+      "black_woman": 33.57041549682617,
+      "white_man": 31.16272735595703,
+      "white_woman": 29.770484924316406,
+      "east_asian_man": 21.022794723510742,
+      "east_asian_woman": 22.964269638061523,
+      "middle_eastern_man": 17.981918334960938,
+      "middle_eastern_woman": 18.56434440612793,
+      "indian_man": 17.86530303955078,
+      "indian_woman": 16.915943145751953,
+      "hispanic_man": 15.438668251037598,
+      "hispanic_woman": 16.10271644592285
+    },
+    "4843": {
+      "black_man": 66.7892074584961,
+      "black_woman": 70.08321380615234,
+      "white_man": 61.670719146728516,
+      "white_woman": 71.71234893798828,
+      "east_asian_man": 73.55438995361328,
+      "east_asian_woman": 76.56993865966797,
+      "middle_eastern_man": 71.58365631103516,
+      "middle_eastern_woman": 74.08316040039062,
+      "indian_man": 76.4226303100586,
+      "indian_woman": 78.51148223876953,
+      "hispanic_man": 66.71885681152344,
+      "hispanic_woman": 72.01263427734375
+    },
+    "3181": {
+      "black_man": 0.7105012536048889,
+      "black_woman": 8.150991439819336,
+      "white_man": 0.0,
+      "white_woman": 0.0,
+      "east_asian_man": 0.19109630584716797,
+      "east_asian_woman": 0.14773155748844147,
+      "middle_eastern_man": 3.666943311691284,
+      "middle_eastern_woman": 16.096290588378906,
+      "indian_man": 24.473588943481445,
+      "indian_woman": 36.24839401245117,
+      "hispanic_man": 0.0,
+      "hispanic_woman": 5.547692775726318
+    },
+    "240": {
+      "black_man": 20.935035705566406,
+      "black_woman": 31.62478256225586,
+      "white_man": 29.349367141723633,
+      "white_woman": 29.173978805541992,
+      "east_asian_man": 34.2103157043457,
+      "east_asian_woman": 38.688621520996094,
+      "middle_eastern_man": 18.466188430786133,
+      "middle_eastern_woman": 18.917137145996094,
+      "indian_man": 28.011608123779297,
+      "indian_woman": 30.693317413330078,
+      "hispanic_man": 31.890243530273438,
+      "hispanic_woman": 34.382381439208984
+    },
+    "3701": {
+      "black_man": 42.21885299682617,
+      "black_woman": 40.352455139160156,
+      "white_man": 38.67198181152344,
+      "white_woman": 44.37629318237305,
+      "east_asian_man": 27.653902053833008,
+      "east_asian_woman": 29.684677124023438,
+      "middle_eastern_man": 41.41568374633789,
+      "middle_eastern_woman": 52.105369567871094,
+      "indian_man": 35.893253326416016,
+      "indian_woman": 43.245487213134766,
+      "hispanic_man": 39.055274963378906,
+      "hispanic_woman": 41.76431655883789
+    },
+    "2294": {
+      "black_man": 33.79730224609375,
+      "black_woman": 0.0,
+      "white_man": 28.984716415405273,
+      "white_woman": 0.09924889355897903,
+      "east_asian_man": 1.7360180616378784,
+      "east_asian_woman": 0.20570777356624603,
+      "middle_eastern_man": 0.3975903391838074,
+      "middle_eastern_woman": 0.0,
+      "indian_man": 0.0,
+      "indian_woman": 0.0,
+      "hispanic_man": 3.081538677215576,
+      "hispanic_woman": 0.23093217611312866
+    },
+    "2940": {
+      "black_man": 36.191986083984375,
+      "black_woman": 41.779205322265625,
+      "white_man": 27.89112091064453,
+      "white_woman": 36.630645751953125,
+      "east_asian_man": 35.435447692871094,
+      "east_asian_woman": 30.258337020874023,
+      "middle_eastern_man": 26.108684539794922,
+      "middle_eastern_woman": 25.156116485595703,
+      "indian_man": 36.174739837646484,
+      "indian_woman": 32.63084411621094,
+      "hispanic_man": 43.73135757446289,
+      "hispanic_woman": 39.1703987121582
+    }
+  },
+  "oneVsMany": [
+    {
+      "feature": 3279,
+      "group": "black_woman",
+      "gap": 55.68551600521261
+    },
+    {
+      "feature": 138,
+      "group": "middle_eastern_woman",
+      "gap": 53.91386932066896
+    },
+    {
+      "feature": 452,
+      "group": "middle_eastern_man",
+      "gap": 47.63782208616084
+    },
+    {
+      "feature": 527,
+      "group": "black_woman",
+      "gap": 44.10579461130229
+    },
+    {
+      "feature": 3725,
+      "group": "indian_woman",
+      "gap": 36.7311818653887
+    },
+    {
+      "feature": 2486,
+      "group": "middle_eastern_woman",
+      "gap": 35.67808006026528
+    },
+    {
+      "feature": 669,
+      "group": "middle_eastern_man",
+      "gap": 34.580740073865115
+    },
+    {
+      "feature": 2527,
+      "group": "indian_woman",
+      "gap": 33.84575627608733
+    },
+    {
+      "feature": 433,
+      "group": "white_woman",
+      "gap": 32.562167802317575
+    },
+    {
+      "feature": 3181,
+      "group": "indian_woman",
+      "gap": 30.886136178265918
+    }
+  ],
+  "manyVsMany": [
+    {
+      "id": "gender",
+      "label": "Women vs. men",
+      "features": [
+        452,
+        2611,
+        1664
+      ],
+      "side": "gender"
+    },
+    {
+      "id": "black",
+      "label": "Black vs. other races",
+      "features": [
+        527,
+        3279,
+        546
+      ],
+      "side": "black"
+    },
+    {
+      "id": "white",
+      "label": "White vs. other races",
+      "features": [
+        669,
+        3459,
+        3722
+      ],
+      "side": "white"
+    },
+    {
+      "id": "east-asian",
+      "label": "East Asian vs. other races",
+      "features": [
+        1759,
+        1563,
+        452
+      ],
+      "side": "east_asian"
+    },
+    {
+      "id": "middle-eastern",
+      "label": "Middle Eastern vs. other races",
+      "features": [
+        138,
+        669,
+        2486
+      ],
+      "side": "middle_eastern"
+    },
+    {
+      "id": "indian",
+      "label": "Indian vs. other races",
+      "features": [
+        669,
+        3181,
+        2527
+      ],
+      "side": "indian"
+    },
+    {
+      "id": "hispanic",
+      "label": "Hispanic vs. other races",
+      "features": [
+        3884,
+        199,
+        138
+      ],
+      "side": "hispanic"
+    }
+  ]
+}
