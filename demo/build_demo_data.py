@@ -87,49 +87,87 @@ def read_group_activation_data():
 
 
 def export_sweep():
-    source = COS398 / "tuning_activations" / "feature_3884"
-    metric_path = source / "mean_metrics_by_group_alpha.csv"
-    by_group = {}
-    with metric_path.open(newline="") as handle:
-        for row in csv.DictReader(handle):
-            if int(row["alpha"]) not in ALPHAS:
-                continue
-            by_group.setdefault(row["group"], {})[int(row["alpha"])] = {
-                "activation": float(row["mean_post_reencoded_feature_3884_activation"]),
-                "activeFraction": float(row["mean_active_spatial_fraction"]),
-                "pixelMae": float(row["mean_pixel_mae_vs_original_rgb_0_255"]),
-            }
+    features = []
+    for feature in (3884, 3279):
+        run = WORKSPACE / "sae-activation-tuning" / "tuning_activations" / f"feature_{feature}" / "run_biased_001"
+        source = COS398 / "tuning_activations" / f"feature_{feature}"
+        settings = json.loads((run / "settings.json").read_text())
+        alphas = [int(a) for a in settings["alpha_values"]]
+        metric_path = run / "mean_metrics_by_group_alpha.csv"
+        by_group = {}
+        with metric_path.open(newline="") as handle:
+            csv_rows = list(csv.DictReader(handle))
+            for row in csv_rows:
+                if int(row["alpha"]) in alphas:
+                    by_group.setdefault(row["group"], {})[int(row["alpha"])] = {
+                        "activation": float(row[f"mean_post_reencoded_feature_{feature}_activation"]),
+                        "activeFraction": float(row["mean_active_spatial_fraction"]),
+                        "pixelMae": float(row["mean_pixel_mae_vs_original_rgb_0_255"]),
+                    }
 
-    sample_groups = ["hispanic_woman", "hispanic_man", "black_woman", "white_man", "white_woman"]
-    asset_root = OUT / "assets" / "feature-3884"
-    for group in sample_groups:
-        plain_sheet = source / group / "seed_sheets" / f"{group}_seed0.jpg"
-        overlay_sheet = source / group / "post_activation_overlays" / f"{group}_seed0.jpg"
-        if not plain_sheet.exists() or not overlay_sheet.exists():
-            continue
-        group_dir = asset_root / group
-        group_dir.mkdir(parents=True, exist_ok=True)
-        for view, sheet_path in (("image", plain_sheet), ("overlay", overlay_sheet)):
-            with Image.open(sheet_path) as sheet:
-                width, height = sheet.size
-                cell_w, cell_h = width // 5, height // 4
-                for index, alpha in enumerate([None] + ALPHAS):
-                    row, col = divmod(index, 5)
-                    # The source sheets have a 30-pixel text label above each portrait.
-                    crop = sheet.crop((col * cell_w, row * cell_h + 30,
-                                       (col + 1) * cell_w, (row + 1) * cell_h))
-                    name = "baseline" if alpha is None else alpha_slug(alpha)
-                    crop.save(group_dir / f"{view}-{name}.jpg", quality=90, optimize=True)
+        maps_path = run / "activation_maps.npz"
+        with np.load(maps_path, allow_pickle=False) as maps:
+            keys = [str(key) for key in maps["map_keys"]]
+            multipliers = [int(a) for a in maps["multipliers"]]
+            pre_maps, post_maps = maps["pre_maps"], maps["post_reencoded_maps"]
+            assert multipliers == alphas, f"Feature {feature}: map and settings alpha order differ"
+            asset_root = OUT / "assets" / f"feature-{feature}"
+            asset_root.mkdir(parents=True, exist_ok=True)
+            for group, label in GROUPS:
+                sheet_path = source / group / "seed_sheets" / f"{group}_seed0.jpg"
+                if not sheet_path.exists():
+                    raise FileNotFoundError(sheet_path)
+                with Image.open(sheet_path) as sheet:
+                    cell, top = 384, 30
+                    cols = sheet.width // cell
+                    ntiles = len(alphas) + 1
+                    rows = (ntiles + cols - 1) // cols
+                    plain = Image.new("RGB", (cols * cell, rows * cell), "white")
+                    jet_sheet = Image.new("RGB", (cols * cell, rows * cell), "white")
+                    map_index = keys.index(f"{group}|0")
+                    for tile_index in range(ntiles):
+                        row, col = divmod(tile_index, cols)
+                        x0, y0 = col * cell, row * (cell + top)
+                        base = sheet.crop((x0, y0 + top, x0 + cell, y0 + top + cell)).convert("RGB")
+                        plain.paste(base, (col * cell, row * cell))
+                        values = pre_maps[map_index] if tile_index == 0 else post_maps[map_index, tile_index - 1]
+                        if tile_index > 0 and alphas[tile_index - 1] == 0:
+                            values = pre_maps[map_index]
+                        values = np.asarray(values, dtype=np.float32)
+                        finite = values[np.isfinite(values)]
+                        vmax = max(float(np.percentile(finite, 99.5)) if finite.size else 0.0, 1e-8)
+                        normalized = np.clip(values / vmax, 0, 1)
+                        colors = (np.nan_to_num(__import__("matplotlib").colormaps["jet"](normalized)[..., :3]) * 255).astype(np.uint8)
+                        opacity = (np.power(normalized, 0.65) * 210).clip(0, 210)
+                        color_img = Image.fromarray(colors, "RGB").resize((cell, cell), Image.Resampling.NEAREST)
+                        opacity_img = Image.fromarray(opacity.astype(np.uint8), "L").resize((cell, cell), Image.Resampling.NEAREST)
+                        color_pixels = np.asarray(color_img, dtype=np.float32)
+                        opacity_pixels = np.asarray(opacity_img, dtype=np.float32)[..., None] / 255.0
+                        heat = Image.fromarray(np.uint8(np.clip(color_pixels * opacity_pixels + np.asarray(base) * (1 - opacity_pixels), 0, 255)), "RGB")
+                        jet_sheet.paste(heat, (col * cell, row * cell))
+                    asset_dir = asset_root
+                    plain.save(asset_dir / f"{group}-images.jpg", quality=86, optimize=True)
+                    jet_sheet.save(asset_dir / f"{group}-jet.jpg", quality=86, optimize=True)
 
-    demo_sweep = {
-        "feature": 3884,
-        "alphas": ALPHAS,
-        "groups": [
-            {"id": slug, "label": dict(GROUPS)[slug], "metrics": by_group.get(slug, {})}
-            for slug in sample_groups if slug in by_group
-        ],
-        "imageNote": "Portraits show seed 0; metrics are means across 20 seeds per group.",
-    }
+                rows_for_group = by_group.get(group, {})
+                # Alpha 1 is the no-op coefficient multiplier, so use it as the
+                # closest saved intervention to the original image when present.
+                baseline = {
+                    "activation": float(np.mean([float(row["mean_pre_intervention_activation"])
+                                                 for row in csv_rows if row["group"] == group])),
+                    "activeFraction": float(np.mean([np.mean(pre_maps[i] > 0)
+                                                     for i, key in enumerate(keys) if key.startswith(group + "|")])),
+                    "pixelMae": 0.0,
+                }
+                group_metrics = {str(a): rows_for_group.get(a, {}) for a in alphas}
+                group_metrics["original"] = baseline
+                if group == GROUPS[0][0]:
+                    feature_groups = []
+                feature_groups.append({"id": group, "label": label, "metrics": group_metrics})
+        features.append({"id": feature, "alphas": alphas, "groups": feature_groups})
+
+    demo_sweep = {"features": features,
+                  "imageNote": "Portraits show seed 0; metrics are means across 20 seeds per group."}
     (OUT / "data").mkdir(exist_ok=True)
     (OUT / "data" / "sweep.json").write_text(json.dumps(demo_sweep, indent=2) + "\n")
 

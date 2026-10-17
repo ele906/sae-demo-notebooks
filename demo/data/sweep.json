@@ -1,531 +1,2844 @@
 {
-  "feature": 3884,
-  "alphas": [
-    -75,
-    -50,
-    -30,
-    -20,
-    -15,
-    -10,
-    -7,
-    -5,
-    -3,
-    0,
-    3,
-    5,
-    7,
-    10,
-    15,
-    20,
-    30,
-    50,
-    75
-  ],
-  "groups": [
+  "features": [
     {
-      "id": "hispanic_woman",
-      "label": "Hispanic women",
-      "metrics": {
-        "-75": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 31.05849142074585
+      "id": 3884,
+      "alphas": [
+        -75,
+        -50,
+        -30,
+        -20,
+        -15,
+        -10,
+        -7,
+        -5,
+        -3,
+        0,
+        3,
+        5,
+        7,
+        10,
+        15,
+        20,
+        30,
+        50,
+        75
+      ],
+      "groups": [
+        {
+          "id": "black_man",
+          "label": "Black men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-50": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 26.547952032089235
+        {
+          "id": "black_woman",
+          "label": "Black women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.1857128143310547
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.09195263981819153
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.06538403630256653
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.05082022547721863
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.04216817319393158
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.031196784973144532
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.02590382993221283
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.02283986359834671
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.020360565185546874
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.019387944042682646
+            },
+            "3": {
+              "activation": 0.004810991510748863,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.018010647594928743
+            },
+            "5": {
+              "activation": 0.008005291223526001,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.020713424682617186
+            },
+            "7": {
+              "activation": 0.011200430244207383,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.022829119861125947
+            },
+            "10": {
+              "activation": 0.01599273830652237,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.027698072791099548
+            },
+            "15": {
+              "activation": 0.02397976368665695,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.044703102111816405
+            },
+            "20": {
+              "activation": 0.031967005133628844,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.08184693455696106
+            },
+            "30": {
+              "activation": 0.04794040322303772,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.1672147750854492
+            },
+            "50": {
+              "activation": 0.07988871335983276,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.2821629762649536
+            },
+            "75": {
+              "activation": 0.11982755661010742,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.29197914600372316
+            },
+            "original": {
+              "activation": 0.001616527698934078,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-30": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 19.861785650253296
+        {
+          "id": "white_man",
+          "label": "White men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 14.496307080984115
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 10.138632601499557
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 6.767655834555626
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 5.126720243692398
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.215383484959602
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.0358920246362686
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.1992377758026125
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.7049401491880416
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.2735669553279876
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.6740653350949287
+            },
+            "3": {
+              "activation": 1.2891200631856918,
+              "activeFraction": 0.033203125,
+              "pixelMae": 1.2931779846549034
+            },
+            "5": {
+              "activation": 2.1451010845601557,
+              "activeFraction": 0.033203125,
+              "pixelMae": 3.5914065331220626
+            },
+            "7": {
+              "activation": 3.0011090241372584,
+              "activeFraction": 0.033203125,
+              "pixelMae": 6.972153523564339
+            },
+            "10": {
+              "activation": 4.28510511815548,
+              "activeFraction": 0.033203125,
+              "pixelMae": 11.136753180623055
+            },
+            "15": {
+              "activation": 6.425099791586399,
+              "activeFraction": 0.033203125,
+              "pixelMae": 14.67929590344429
+            },
+            "20": {
+              "activation": 8.565071433782578,
+              "activeFraction": 0.033203125,
+              "pixelMae": 16.094784688949584
+            },
+            "30": {
+              "activation": 12.845021313428878,
+              "activeFraction": 0.033203125,
+              "pixelMae": 18.18331249952316
+            },
+            "50": {
+              "activation": 21.40494726896286,
+              "activeFraction": 0.033203125,
+              "pixelMae": 21.489483761787415
+            },
+            "75": {
+              "activation": 32.10482728481293,
+              "activeFraction": 0.033203125,
+              "pixelMae": 24.094721508026122
+            },
+            "original": {
+              "activation": 0.4331239706836641,
+              "activeFraction": 0.033203125,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-20": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 16.925220084190368
+        {
+          "id": "white_woman",
+          "label": "White women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.5682957410812377
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.9498793303966522
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.2762953847646714
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.841959747672081
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.6196090027689933
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.4152354672551155
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.32577921599149706
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.27928599864244463
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.23863448947668076
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.16285273283720017
+            },
+            "3": {
+              "activation": 0.12498804293572903,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 0.28077634125947953
+            },
+            "5": {
+              "activation": 0.20797810927033425,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 0.708716644346714
+            },
+            "7": {
+              "activation": 0.29096974432468414,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 1.301345956325531
+            },
+            "10": {
+              "activation": 0.4154584124684334,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 2.250113235414028
+            },
+            "15": {
+              "activation": 0.6229404121637344,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 2.7777315109968184
+            },
+            "20": {
+              "activation": 0.830419996380806,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 3.3199904382228853
+            },
+            "30": {
+              "activation": 1.2453765720129013,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 3.81924455165863
+            },
+            "50": {
+              "activation": 2.0753017365932465,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 4.2791935205459595
+            },
+            "75": {
+              "activation": 3.112745702266693,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 4.395123410224914
+            },
+            "original": {
+              "activation": 0.04199324771761894,
+              "activeFraction": 0.0033203125,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-15": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 14.921256422996521
+        {
+          "id": "east_asian_man",
+          "label": "East Asian men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-10": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 11.349072754383087
+        {
+          "id": "east_asian_woman",
+          "label": "East Asian women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-7": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 8.612770295143127
+        {
+          "id": "middle_eastern_man",
+          "label": "Middle Eastern men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-5": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 6.731980592012405
+        {
+          "id": "middle_eastern_woman",
+          "label": "Middle Eastern women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-3": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 4.967897242307663
+        {
+          "id": "indian_man",
+          "label": "Indian men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "0": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 2.128620484471321
+        {
+          "id": "indian_woman",
+          "label": "Indian women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "3": {
-          "activation": 7.5542720556259155,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 9.463968440890312
+        {
+          "id": "hispanic_man",
+          "label": "Hispanic men",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 21.572053265571594
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 16.45337356328964
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 11.643791615962982
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 9.44487006664276
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 8.074793940782547
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 5.998524552583694
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.422833332419396
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.4208280712366106
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.5326703906059267
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.185236157476902
+            },
+            "3": {
+              "activation": 2.451355917751789,
+              "activeFraction": 0.065625,
+              "pixelMae": 3.7018193930387495
+            },
+            "5": {
+              "activation": 4.079089757800102,
+              "activeFraction": 0.065625,
+              "pixelMae": 8.974436098337174
+            },
+            "7": {
+              "activation": 5.706841653585434,
+              "activeFraction": 0.065625,
+              "pixelMae": 13.214248132705688
+            },
+            "10": {
+              "activation": 8.148440754413604,
+              "activeFraction": 0.065625,
+              "pixelMae": 16.95936886072159
+            },
+            "15": {
+              "activation": 12.217762893438339,
+              "activeFraction": 0.065625,
+              "pixelMae": 20.79256937503815
+            },
+            "20": {
+              "activation": 16.287093555927278,
+              "activeFraction": 0.065625,
+              "pixelMae": 22.944842195510866
+            },
+            "30": {
+              "activation": 24.425814604759218,
+              "activeFraction": 0.065625,
+              "pixelMae": 26.03378438949585
+            },
+            "50": {
+              "activation": 40.703142857551576,
+              "activeFraction": 0.065625,
+              "pixelMae": 30.13307943344116
+            },
+            "75": {
+              "activation": 61.049853515625,
+              "activeFraction": 0.065625,
+              "pixelMae": 33.16471633911133
+            },
+            "original": {
+              "activation": 0.8236175604164601,
+              "activeFraction": 0.065625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "5": {
-          "activation": 12.570413041114808,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 18.171543180942535
-        },
-        "7": {
-          "activation": 17.58658149242401,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 23.394756698608397
-        },
-        "10": {
-          "activation": 25.110799980163574,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 27.18403639793396
-        },
-        "15": {
-          "activation": 37.65117249488831,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 29.74499158859253
-        },
-        "20": {
-          "activation": 50.19164981842041,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 31.050367641448975
-        },
-        "30": {
-          "activation": 75.27236909866333,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 33.12668361663818
-        },
-        "50": {
-          "activation": 125.43396186828613,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 35.60477247238159
-        },
-        "75": {
-          "activation": 188.13575744628906,
-          "activeFraction": 0.1783203125,
-          "pixelMae": 37.76050987243652
+        {
+          "id": "hispanic_woman",
+          "label": "Hispanic women",
+          "metrics": {
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 31.05849142074585
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 26.547952032089235
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 19.861785650253296
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 16.925220084190368
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 14.921256422996521
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 11.349072754383087
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 8.612770295143127
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 6.731980592012405
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.967897242307663
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.128620484471321
+            },
+            "3": {
+              "activation": 7.5542720556259155,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 9.463968440890312
+            },
+            "5": {
+              "activation": 12.570413041114808,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 18.171543180942535
+            },
+            "7": {
+              "activation": 17.58658149242401,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 23.394756698608397
+            },
+            "10": {
+              "activation": 25.110799980163574,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 27.18403639793396
+            },
+            "15": {
+              "activation": 37.65117249488831,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 29.74499158859253
+            },
+            "20": {
+              "activation": 50.19164981842041,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 31.050367641448975
+            },
+            "30": {
+              "activation": 75.27236909866333,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 33.12668361663818
+            },
+            "50": {
+              "activation": 125.43396186828613,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 35.60477247238159
+            },
+            "75": {
+              "activation": 188.13575744628906,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 37.76050987243652
+            },
+            "original": {
+              "activation": 2.5381192147731775,
+              "activeFraction": 0.1783203125,
+              "pixelMae": 0.0
+            }
+          }
         }
-      }
+      ]
     },
     {
-      "id": "hispanic_man",
-      "label": "Hispanic men",
-      "metrics": {
-        "-75": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 21.572053265571594
+      "id": 3279,
+      "alphas": [
+        -120,
+        -100,
+        -75,
+        -50,
+        -30,
+        -20,
+        -15,
+        -10,
+        -7,
+        -5,
+        -3,
+        0,
+        3,
+        5,
+        7,
+        10,
+        15,
+        20,
+        30,
+        50,
+        75,
+        100,
+        120
+      ],
+      "groups": [
+        {
+          "id": "black_man",
+          "label": "Black men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 19.1022980093956
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 18.458029174804686
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 17.17301536798477
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 15.959272480010986
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 13.39076235294342
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 10.93724881708622
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 8.926056775450707
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 6.382519838213921
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.803157910704613
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.155306792259216
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.2510019689798355
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.2622865632176399
+            },
+            "3": {
+              "activation": 0.8424292068928481,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 3.154128669202328
+            },
+            "5": {
+              "activation": 1.3969240486621857,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 6.624865338206291
+            },
+            "7": {
+              "activation": 1.951431192457676,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 9.751330715417861
+            },
+            "10": {
+              "activation": 2.7831646665930747,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 12.579625248908997
+            },
+            "15": {
+              "activation": 4.169420972466469,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 15.684604167938232
+            },
+            "20": {
+              "activation": 5.5556454211473465,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 18.039386010169984
+            },
+            "30": {
+              "activation": 8.328113955259322,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 20.96123695373535
+            },
+            "50": {
+              "activation": 13.873086190223693,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 23.163258504867553
+            },
+            "75": {
+              "activation": 20.80418493747711,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 24.288884258270265
+            },
+            "100": {
+              "activation": 27.735287070274353,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 24.839652013778686
+            },
+            "120": {
+              "activation": 33.280524337291716,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 26.060889720916748
+            },
+            "original": {
+              "activation": 0.28793120197951794,
+              "activeFraction": 0.0185546875,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-50": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 16.45337356328964
+        {
+          "id": "black_woman",
+          "label": "Black women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 96.64730262756348
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 91.9298526763916
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 85.26591720581055
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 77.37125072479247
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 72.6449712753296
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 64.58034915924073
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 54.227082347869874
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 46.34313621520996
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 42.753145694732666
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 40.27614555358887
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 39.12809762954712
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 20.141840505599976
+            },
+            "3": {
+              "activation": 26.931728172302247,
+              "activeFraction": 0.351171875,
+              "pixelMae": 24.482145404815675
+            },
+            "5": {
+              "activation": 44.65860843658447,
+              "activeFraction": 0.351171875,
+              "pixelMae": 33.42668867111206
+            },
+            "7": {
+              "activation": 62.38537311553955,
+              "activeFraction": 0.351171875,
+              "pixelMae": 37.449916458129884
+            },
+            "10": {
+              "activation": 88.97561836242676,
+              "activeFraction": 0.351171875,
+              "pixelMae": 41.800733375549314
+            },
+            "15": {
+              "activation": 133.29250869750976,
+              "activeFraction": 0.351171875,
+              "pixelMae": 48.209270763397214
+            },
+            "20": {
+              "activation": 177.60956954956055,
+              "activeFraction": 0.351171875,
+              "pixelMae": 53.435978412628174
+            },
+            "30": {
+              "activation": 266.2431297302246,
+              "activeFraction": 0.351171875,
+              "pixelMae": 62.95446624755859
+            },
+            "50": {
+              "activation": 443.51182861328124,
+              "activeFraction": 0.351171875,
+              "pixelMae": 60.915259170532224
+            },
+            "75": {
+              "activation": 665.0965942382812,
+              "activeFraction": 0.351171875,
+              "pixelMae": 57.10501289367676
+            },
+            "100": {
+              "activation": 886.6817901611328,
+              "activeFraction": 0.351171875,
+              "pixelMae": 56.19194984436035
+            },
+            "120": {
+              "activation": 1063.9501525878907,
+              "activeFraction": 0.351171875,
+              "pixelMae": 55.49645843505859
+            },
+            "original": {
+              "activation": 9.204930567741396,
+              "activeFraction": 0.351171875,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-30": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 11.643791615962982
+        {
+          "id": "white_man",
+          "label": "White men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 10.489603757858276
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 9.314645576477051
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 7.73504102230072
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 5.842811226844788
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.254402697086334
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.2239714860916138
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.648899585008621
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 2.0109529078006743
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.676374226808548
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.4255374044179916
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.1324186265468597
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.5179021790623665
+            },
+            "3": {
+              "activation": 0.36410573199391366,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 0.8636244475841522
+            },
+            "5": {
+              "activation": 0.6037676617503166,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 1.6278636157512665
+            },
+            "7": {
+              "activation": 0.8434277579188347,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 2.5491907715797426
+            },
+            "10": {
+              "activation": 1.2029082730412484,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 4.025971043109894
+            },
+            "15": {
+              "activation": 1.8020560175180436,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 6.38298773765564
+            },
+            "20": {
+              "activation": 2.401189070940018,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 8.109505701065064
+            },
+            "30": {
+              "activation": 3.5995371341705322,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 9.47033371925354
+            },
+            "50": {
+              "activation": 5.99604549407959,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 10.208732652664185
+            },
+            "75": {
+              "activation": 8.99179983139038,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 10.882533645629882
+            },
+            "100": {
+              "activation": 11.987573158740997,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 11.84392008781433
+            },
+            "120": {
+              "activation": 14.384141111373902,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 12.62207236289978
+            },
+            "original": {
+              "activation": 0.12444661855697628,
+              "activeFraction": 0.0103515625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-20": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 9.44487006664276
+        {
+          "id": "white_woman",
+          "label": "White women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 45.29059886932373
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 44.12472200393677
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 43.110327911376956
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 39.784219074249265
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 31.658814239501954
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 27.31067795753479
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 24.811605548858644
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 21.710853385925294
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 19.201133012771606
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 16.778053092956544
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 13.833354187011718
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 5.409007978439331
+            },
+            "3": {
+              "activation": 10.80782425403595,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 10.156297588348389
+            },
+            "5": {
+              "activation": 17.921698141098023,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 16.78582000732422
+            },
+            "7": {
+              "activation": 25.03549728393555,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 21.36518168449402
+            },
+            "10": {
+              "activation": 35.706272983551024,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 25.84746217727661
+            },
+            "15": {
+              "activation": 53.49080352783203,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 30.181937503814698
+            },
+            "20": {
+              "activation": 71.2754415512085,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 32.51472816467285
+            },
+            "30": {
+              "activation": 106.84474983215333,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 34.582345199584964
+            },
+            "50": {
+              "activation": 177.98326683044434,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 38.39052076339722
+            },
+            "75": {
+              "activation": 266.90639038085936,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 46.32795524597168
+            },
+            "100": {
+              "activation": 355.82957611083987,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 47.43380298614502
+            },
+            "120": {
+              "activation": 426.9677215576172,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 47.7144718170166
+            },
+            "original": {
+              "activation": 3.693978476524352,
+              "activeFraction": 0.2478515625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-15": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 8.074793940782547
+        {
+          "id": "east_asian_man",
+          "label": "East Asian men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.41560720205307006
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.33357919454574586
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.27718340158462523
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.2378498673439026
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.1451224595308304
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.11299184262752533
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.09035103917121887
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.07092266231775284
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.05956738740205765
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.05156987458467484
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.04663581997156143
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.036204592883586885
+            },
+            "3": {
+              "activation": 0.0097652155905962,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.05701103359460831
+            },
+            "5": {
+              "activation": 0.016194184869527818,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.09472313076257706
+            },
+            "7": {
+              "activation": 0.022624967247247697,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.15318864583969116
+            },
+            "10": {
+              "activation": 0.03226611167192459,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.2630004346370697
+            },
+            "15": {
+              "activation": 0.048337440192699435,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.3881117463111877
+            },
+            "20": {
+              "activation": 0.06440699696540833,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.4556688189506531
+            },
+            "30": {
+              "activation": 0.09655004441738128,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.5951805114746094
+            },
+            "50": {
+              "activation": 0.16083889007568358,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.7651295900344849
+            },
+            "75": {
+              "activation": 0.24118430614471437,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8129396438598633
+            },
+            "100": {
+              "activation": 0.3215283989906311,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8534843444824218
+            },
+            "120": {
+              "activation": 0.38581557273864747,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8990617752075195
+            },
+            "original": {
+              "activation": 0.0033380423672497283,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-10": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 5.998524552583694
+        {
+          "id": "east_asian_woman",
+          "label": "East Asian women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-7": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 4.422833332419396
+        {
+          "id": "middle_eastern_man",
+          "label": "Middle Eastern men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.0818144798278808
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.9975069999694824
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.8567036628723145
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.6247553348541259
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.38671348094940183
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.30027987957000735
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.25768916606903075
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.2060702085494995
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.16621017456054688
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.13643862009048463
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.10228105783462524
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.040017318725585935
+            },
+            "3": {
+              "activation": 0.00862397849559784,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.06612548828125
+            },
+            "5": {
+              "activation": 0.014300577342510223,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.11460431814193725
+            },
+            "7": {
+              "activation": 0.019977399706840517,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.1622409224510193
+            },
+            "10": {
+              "activation": 0.028493046760559082,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.24645392894744872
+            },
+            "15": {
+              "activation": 0.04268374145030975,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.405987024307251
+            },
+            "20": {
+              "activation": 0.056873881816864015,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.5368566036224365
+            },
+            "30": {
+              "activation": 0.08525859117507935,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.6745469570159912
+            },
+            "50": {
+              "activation": 0.14202430248260497,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.7836057662963867
+            },
+            "75": {
+              "activation": 0.2129793643951416,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8215934753417968
+            },
+            "100": {
+              "activation": 0.28393852710723877,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8213347434997559
+            },
+            "120": {
+              "activation": 0.34071078300476076,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.8495841026306152
+            },
+            "original": {
+              "activation": 0.0029476750642061234,
+              "activeFraction": 0.000390625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-5": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 3.4208280712366106
+        {
+          "id": "middle_eastern_woman",
+          "label": "Middle Eastern women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "-3": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 2.5326703906059267
+        {
+          "id": "indian_man",
+          "label": "Indian men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.38827273845672605
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.35259113311767576
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.29110763072967527
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.22064075469970704
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.14701181650161743
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.12145532369613647
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.10809293985366822
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.09241517186164856
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.07819932103157043
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.06722590327262878
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.055594509840011595
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.033843550086021426
+            },
+            "3": {
+              "activation": 0.005702695995569229,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.04461657106876373
+            },
+            "5": {
+              "activation": 0.009455227106809617,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.06988112330436706
+            },
+            "7": {
+              "activation": 0.013208630681037902,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.09640178680419922
+            },
+            "10": {
+              "activation": 0.0188390851020813,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.1418302536010742
+            },
+            "15": {
+              "activation": 0.0282221257686615,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.22618942260742186
+            },
+            "20": {
+              "activation": 0.03760496377944946,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.31398441791534426
+            },
+            "30": {
+              "activation": 0.05637229084968567,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.44852185249328613
+            },
+            "50": {
+              "activation": 0.09390069842338562,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.5672093868255615
+            },
+            "75": {
+              "activation": 0.1408182978630066,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.5809005737304688
+            },
+            "100": {
+              "activation": 0.18773844242095947,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.5811026096343994
+            },
+            "120": {
+              "activation": 0.22526900768280028,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.5874574661254883
+            },
+            "original": {
+              "activation": 0.0019489491358399397,
+              "activeFraction": 0.0001953125,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "0": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 1.185236157476902
+        {
+          "id": "indian_woman",
+          "label": "Indian women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            },
+            "original": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "3": {
-          "activation": 2.451355917751789,
-          "activeFraction": 0.065625,
-          "pixelMae": 3.7018193930387495
+        {
+          "id": "hispanic_man",
+          "label": "Hispanic men",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 26.580331468582152
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 23.197456622123717
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 21.215239667892455
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 18.19163864850998
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 14.238854438066483
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 10.51907345354557
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 8.894855952262878
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 7.22549340724945
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 5.948205491900444
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 4.938275003433228
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.80648777782917
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 1.5062138184905052
+            },
+            "3": {
+              "activation": 1.4073391269892455,
+              "activeFraction": 0.03515625,
+              "pixelMae": 3.2055274665355684
+            },
+            "5": {
+              "activation": 2.3336591571569443,
+              "activeFraction": 0.03515625,
+              "pixelMae": 6.521822288632393
+            },
+            "7": {
+              "activation": 3.2599990501999856,
+              "activeFraction": 0.03515625,
+              "pixelMae": 10.127501732110977
+            },
+            "10": {
+              "activation": 4.6494990035891535,
+              "activeFraction": 0.03515625,
+              "pixelMae": 14.552637875080109
+            },
+            "15": {
+              "activation": 6.9653113156557085,
+              "activeFraction": 0.03515625,
+              "pixelMae": 18.982668602466582
+            },
+            "20": {
+              "activation": 9.281086760759354,
+              "activeFraction": 0.03515625,
+              "pixelMae": 21.164430499076843
+            },
+            "30": {
+              "activation": 13.912808018922806,
+              "activeFraction": 0.03515625,
+              "pixelMae": 23.41713328361511
+            },
+            "50": {
+              "activation": 23.17606465816498,
+              "activeFraction": 0.03515625,
+              "pixelMae": 25.870508098602294
+            },
+            "75": {
+              "activation": 34.75524749755859,
+              "activeFraction": 0.03515625,
+              "pixelMae": 28.73594379425049
+            },
+            "100": {
+              "activation": 46.33435422182083,
+              "activeFraction": 0.03515625,
+              "pixelMae": 31.627137851715087
+            },
+            "120": {
+              "activation": 55.59768056869507,
+              "activeFraction": 0.03515625,
+              "pixelMae": 33.98949403762818
+            },
+            "original": {
+              "activation": 0.48101113438606247,
+              "activeFraction": 0.03515625,
+              "pixelMae": 0.0
+            }
+          }
         },
-        "5": {
-          "activation": 4.079089757800102,
-          "activeFraction": 0.065625,
-          "pixelMae": 8.974436098337174
-        },
-        "7": {
-          "activation": 5.706841653585434,
-          "activeFraction": 0.065625,
-          "pixelMae": 13.214248132705688
-        },
-        "10": {
-          "activation": 8.148440754413604,
-          "activeFraction": 0.065625,
-          "pixelMae": 16.95936886072159
-        },
-        "15": {
-          "activation": 12.217762893438339,
-          "activeFraction": 0.065625,
-          "pixelMae": 20.79256937503815
-        },
-        "20": {
-          "activation": 16.287093555927278,
-          "activeFraction": 0.065625,
-          "pixelMae": 22.944842195510866
-        },
-        "30": {
-          "activation": 24.425814604759218,
-          "activeFraction": 0.065625,
-          "pixelMae": 26.03378438949585
-        },
-        "50": {
-          "activation": 40.703142857551576,
-          "activeFraction": 0.065625,
-          "pixelMae": 30.13307943344116
-        },
-        "75": {
-          "activation": 61.049853515625,
-          "activeFraction": 0.065625,
-          "pixelMae": 33.16471633911133
+        {
+          "id": "hispanic_woman",
+          "label": "Hispanic women",
+          "metrics": {
+            "-120": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 34.71814403533936
+            },
+            "-100": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 33.097660827636716
+            },
+            "-75": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 31.355495119094847
+            },
+            "-50": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 26.122294092178343
+            },
+            "-30": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 21.63647484779358
+            },
+            "-20": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 19.295266771316527
+            },
+            "-15": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 17.58302493095398
+            },
+            "-10": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 14.535294771194458
+            },
+            "-7": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 11.961019122600556
+            },
+            "-5": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 10.244461476802826
+            },
+            "-3": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 8.367276740074157
+            },
+            "0": {
+              "activation": 0.0,
+              "activeFraction": 0.0,
+              "pixelMae": 3.657304447889328
+            },
+            "3": {
+              "activation": 4.603622430562973,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 7.820687568187713
+            },
+            "5": {
+              "activation": 7.633755612373352,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 13.87453327178955
+            },
+            "7": {
+              "activation": 10.663972103595734,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 18.047718811035157
+            },
+            "10": {
+              "activation": 15.209248280525207,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 22.41141242980957
+            },
+            "15": {
+              "activation": 22.784623098373412,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 26.534085702896117
+            },
+            "20": {
+              "activation": 30.360044717788696,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 29.26337089538574
+            },
+            "30": {
+              "activation": 45.51089515686035,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 32.2755407333374
+            },
+            "50": {
+              "activation": 75.81261873245239,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 36.484115028381346
+            },
+            "75": {
+              "activation": 113.68950748443604,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 40.370879364013675
+            },
+            "100": {
+              "activation": 151.56677875518798,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 42.27046070098877
+            },
+            "120": {
+              "activation": 181.8683681488037,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 42.74639453887939
+            },
+            "original": {
+              "activation": 1.5734634697437286,
+              "activeFraction": 0.1064453125,
+              "pixelMae": 0.0
+            }
+          }
         }
-      }
-    },
-    {
-      "id": "black_woman",
-      "label": "Black women",
-      "metrics": {
-        "-75": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.1857128143310547
-        },
-        "-50": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.09195263981819153
-        },
-        "-30": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.06538403630256653
-        },
-        "-20": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.05082022547721863
-        },
-        "-15": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.04216817319393158
-        },
-        "-10": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.031196784973144532
-        },
-        "-7": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.02590382993221283
-        },
-        "-5": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.02283986359834671
-        },
-        "-3": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.020360565185546874
-        },
-        "0": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.019387944042682646
-        },
-        "3": {
-          "activation": 0.004810991510748863,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.018010647594928743
-        },
-        "5": {
-          "activation": 0.008005291223526001,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.020713424682617186
-        },
-        "7": {
-          "activation": 0.011200430244207383,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.022829119861125947
-        },
-        "10": {
-          "activation": 0.01599273830652237,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.027698072791099548
-        },
-        "15": {
-          "activation": 0.02397976368665695,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.044703102111816405
-        },
-        "20": {
-          "activation": 0.031967005133628844,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.08184693455696106
-        },
-        "30": {
-          "activation": 0.04794040322303772,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.1672147750854492
-        },
-        "50": {
-          "activation": 0.07988871335983276,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.2821629762649536
-        },
-        "75": {
-          "activation": 0.11982755661010742,
-          "activeFraction": 0.0001953125,
-          "pixelMae": 0.29197914600372316
-        }
-      }
-    },
-    {
-      "id": "white_man",
-      "label": "White men",
-      "metrics": {
-        "-75": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 14.496307080984115
-        },
-        "-50": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 10.138632601499557
-        },
-        "-30": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 6.767655834555626
-        },
-        "-20": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 5.126720243692398
-        },
-        "-15": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 4.215383484959602
-        },
-        "-10": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 3.0358920246362686
-        },
-        "-7": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 2.1992377758026125
-        },
-        "-5": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 1.7049401491880416
-        },
-        "-3": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 1.2735669553279876
-        },
-        "0": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.6740653350949287
-        },
-        "3": {
-          "activation": 1.2891200631856918,
-          "activeFraction": 0.033203125,
-          "pixelMae": 1.2931779846549034
-        },
-        "5": {
-          "activation": 2.1451010845601557,
-          "activeFraction": 0.033203125,
-          "pixelMae": 3.5914065331220626
-        },
-        "7": {
-          "activation": 3.0011090241372584,
-          "activeFraction": 0.033203125,
-          "pixelMae": 6.972153523564339
-        },
-        "10": {
-          "activation": 4.28510511815548,
-          "activeFraction": 0.033203125,
-          "pixelMae": 11.136753180623055
-        },
-        "15": {
-          "activation": 6.425099791586399,
-          "activeFraction": 0.033203125,
-          "pixelMae": 14.67929590344429
-        },
-        "20": {
-          "activation": 8.565071433782578,
-          "activeFraction": 0.033203125,
-          "pixelMae": 16.094784688949584
-        },
-        "30": {
-          "activation": 12.845021313428878,
-          "activeFraction": 0.033203125,
-          "pixelMae": 18.18331249952316
-        },
-        "50": {
-          "activation": 21.40494726896286,
-          "activeFraction": 0.033203125,
-          "pixelMae": 21.489483761787415
-        },
-        "75": {
-          "activation": 32.10482728481293,
-          "activeFraction": 0.033203125,
-          "pixelMae": 24.094721508026122
-        }
-      }
-    },
-    {
-      "id": "white_woman",
-      "label": "White women",
-      "metrics": {
-        "-75": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 2.5682957410812377
-        },
-        "-50": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 1.9498793303966522
-        },
-        "-30": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 1.2762953847646714
-        },
-        "-20": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.841959747672081
-        },
-        "-15": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.6196090027689933
-        },
-        "-10": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.4152354672551155
-        },
-        "-7": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.32577921599149706
-        },
-        "-5": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.27928599864244463
-        },
-        "-3": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.23863448947668076
-        },
-        "0": {
-          "activation": 0.0,
-          "activeFraction": 0.0,
-          "pixelMae": 0.16285273283720017
-        },
-        "3": {
-          "activation": 0.12498804293572903,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 0.28077634125947953
-        },
-        "5": {
-          "activation": 0.20797810927033425,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 0.708716644346714
-        },
-        "7": {
-          "activation": 0.29096974432468414,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 1.301345956325531
-        },
-        "10": {
-          "activation": 0.4154584124684334,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 2.250113235414028
-        },
-        "15": {
-          "activation": 0.6229404121637344,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 2.7777315109968184
-        },
-        "20": {
-          "activation": 0.830419996380806,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 3.3199904382228853
-        },
-        "30": {
-          "activation": 1.2453765720129013,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 3.81924455165863
-        },
-        "50": {
-          "activation": 2.0753017365932465,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 4.2791935205459595
-        },
-        "75": {
-          "activation": 3.112745702266693,
-          "activeFraction": 0.0033203125,
-          "pixelMae": 4.395123410224914
-        }
-      }
+      ]
     }
   ],
   "imageNote": "Portraits show seed 0; metrics are means across 20 seeds per group."
