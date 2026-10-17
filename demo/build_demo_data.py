@@ -13,7 +13,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
-COS398 = WORKSPACE / "cos398"
+FEATURE_ROOT = WORKSPACE / "sae-activation-tuning" / "tuning_activations"
 OUT = ROOT / "demo"
 GROUPS = [
     ("black_man", "Black men"),
@@ -86,40 +86,85 @@ def read_group_activation_data():
     }
 
 
+def completed_sweep_runs():
+    expected_groups = {slug for slug, _ in GROUPS}
+    discovered = []
+    for feature_dir in FEATURE_ROOT.glob("feature_*"):
+        if not feature_dir.is_dir():
+            continue
+        try:
+            feature = int(feature_dir.name.removeprefix("feature_"))
+        except ValueError:
+            continue
+        candidates = []
+        for run in feature_dir.glob("run_biased_*"):
+            if not run.is_dir():
+                continue
+            try:
+                settings = json.loads((run / "settings.json").read_text())
+                groups = settings["groups"]
+                alphas = [int(a) for a in settings["alpha_values"]]
+                if set(groups) != expected_groups or settings.get("samples_per_group") != 20:
+                    continue
+                if not (run / "activation_maps.npz").is_file() or not (run / "mean_metrics_by_group_alpha.csv").is_file():
+                    continue
+                with (run / "mean_metrics_by_group_alpha.csv").open(newline="") as handle:
+                    metric_rows = list(csv.DictReader(handle))
+                if len(metric_rows) != len(GROUPS) * len(alphas):
+                    continue
+                if any(not (run / group / "seed_sheets" / f"{group}_seed0.jpg").is_file()
+                       for group in expected_groups):
+                    continue
+                with np.load(run / "activation_maps.npz", allow_pickle=False) as maps:
+                    keys = [str(key) for key in maps["map_keys"]]
+                    if [int(a) for a in maps["multipliers"]] != alphas:
+                        continue
+                    if maps["pre_maps"].shape[0] != 240 or maps["post_reencoded_maps"].shape[:2] != (240, len(alphas)):
+                        continue
+                    expected_keys = {f"{group}|{seed}" for group in expected_groups for seed in range(20)}
+                    if set(keys) != expected_keys:
+                        continue
+                candidates.append((run.stat().st_mtime, run, settings, metric_rows))
+            except (OSError, KeyError, ValueError, json.JSONDecodeError):
+                continue
+        if candidates:
+            _, run, settings, metric_rows = max(candidates, key=lambda item: item[0])
+            discovered.append((feature, run, settings, metric_rows))
+    priority = {3884: 0, 3279: 1}
+    return sorted(discovered, key=lambda item: (priority.get(item[0], 2), item[0]))
+
+
 def export_sweep():
     features = []
-    for feature in (3884, 3279):
-        run = WORKSPACE / "sae-activation-tuning" / "tuning_activations" / f"feature_{feature}" / "run_biased_001"
-        source = COS398 / "tuning_activations" / f"feature_{feature}"
-        settings = json.loads((run / "settings.json").read_text())
+    for feature, run, settings, csv_rows in completed_sweep_runs():
         alphas = [int(a) for a in settings["alpha_values"]]
-        metric_path = run / "mean_metrics_by_group_alpha.csv"
         by_group = {}
-        with metric_path.open(newline="") as handle:
-            csv_rows = list(csv.DictReader(handle))
-            for row in csv_rows:
-                if int(row["alpha"]) in alphas:
-                    by_group.setdefault(row["group"], {})[int(row["alpha"])] = {
-                        "activation": float(row[f"mean_post_reencoded_feature_{feature}_activation"]),
-                        "activeFraction": float(row["mean_active_spatial_fraction"]),
-                        "pixelMae": float(row["mean_pixel_mae_vs_original_rgb_0_255"]),
-                    }
+        for row in csv_rows:
+            by_group.setdefault(row["group"], {})[int(row["alpha"])] = {
+                "activation": float(row[f"mean_post_reencoded_feature_{feature}_activation"]),
+                "activeFraction": float(row["mean_active_spatial_fraction"]),
+                "pixelMae": float(row["mean_pixel_mae_vs_original_rgb_0_255"]),
+            }
 
-        maps_path = run / "activation_maps.npz"
-        with np.load(maps_path, allow_pickle=False) as maps:
+        with np.load(run / "activation_maps.npz", allow_pickle=False) as maps:
             keys = [str(key) for key in maps["map_keys"]]
             multipliers = [int(a) for a in maps["multipliers"]]
             pre_maps, post_maps = maps["pre_maps"], maps["post_reencoded_maps"]
-            assert multipliers == alphas, f"Feature {feature}: map and settings alpha order differ"
+            if multipliers != alphas:
+                raise ValueError(f"Feature {feature}: map and settings alpha order differ")
             asset_root = OUT / "assets" / f"feature-{feature}"
             asset_root.mkdir(parents=True, exist_ok=True)
+            feature_groups = []
+            sheet_columns = None
             for group, label in GROUPS:
-                sheet_path = source / group / "seed_sheets" / f"{group}_seed0.jpg"
-                if not sheet_path.exists():
-                    raise FileNotFoundError(sheet_path)
+                sheet_path = run / group / "seed_sheets" / f"{group}_seed0.jpg"
                 with Image.open(sheet_path) as sheet:
-                    cell, top = 384, 30
-                    cols = sheet.width // cell
+                    source_cell, top = 384, 30
+                    cell = 256
+                    cols = sheet.width // source_cell
+                    if sheet.width % source_cell or cols not in (5, 6):
+                        raise ValueError(f"Unexpected seed sheet dimensions for feature {feature}: {sheet.size}")
+                    sheet_columns = cols
                     ntiles = len(alphas) + 1
                     rows = (ntiles + cols - 1) // cols
                     plain = Image.new("RGB", (cols * cell, rows * cell), "white")
@@ -127,8 +172,9 @@ def export_sweep():
                     map_index = keys.index(f"{group}|0")
                     for tile_index in range(ntiles):
                         row, col = divmod(tile_index, cols)
-                        x0, y0 = col * cell, row * (cell + top)
-                        base = sheet.crop((x0, y0 + top, x0 + cell, y0 + top + cell)).convert("RGB")
+                        x0, y0 = col * source_cell, row * (source_cell + top)
+                        base = sheet.crop((x0, y0 + top, x0 + source_cell, y0 + top + source_cell)).convert("RGB")
+                        base = base.resize((cell, cell), Image.Resampling.LANCZOS)
                         plain.paste(base, (col * cell, row * cell))
                         values = pre_maps[map_index] if tile_index == 0 else post_maps[map_index, tile_index - 1]
                         if tile_index > 0 and alphas[tile_index - 1] == 0:
@@ -145,13 +191,10 @@ def export_sweep():
                         opacity_pixels = np.asarray(opacity_img, dtype=np.float32)[..., None] / 255.0
                         heat = Image.fromarray(np.uint8(np.clip(color_pixels * opacity_pixels + np.asarray(base) * (1 - opacity_pixels), 0, 255)), "RGB")
                         jet_sheet.paste(heat, (col * cell, row * cell))
-                    asset_dir = asset_root
-                    plain.save(asset_dir / f"{group}-images.jpg", quality=86, optimize=True)
-                    jet_sheet.save(asset_dir / f"{group}-jet.jpg", quality=86, optimize=True)
+                    plain.save(asset_root / f"{group}-images.jpg", quality=86, optimize=True)
+                    jet_sheet.save(asset_root / f"{group}-jet.jpg", quality=86, optimize=True)
 
-                rows_for_group = by_group.get(group, {})
-                # Alpha 1 is the no-op coefficient multiplier, so use it as the
-                # closest saved intervention to the original image when present.
+                rows_for_group = by_group[group]
                 baseline = {
                     "activation": float(np.mean([float(row["mean_pre_intervention_activation"])
                                                  for row in csv_rows if row["group"] == group])),
@@ -159,13 +202,14 @@ def export_sweep():
                                                      for i, key in enumerate(keys) if key.startswith(group + "|")])),
                     "pixelMae": 0.0,
                 }
-                group_metrics = {str(a): rows_for_group.get(a, {}) for a in alphas}
+                group_metrics = {str(a): rows_for_group[a] for a in alphas}
                 group_metrics["original"] = baseline
-                if group == GROUPS[0][0]:
-                    feature_groups = []
                 feature_groups.append({"id": group, "label": label, "metrics": group_metrics})
-        features.append({"id": feature, "alphas": alphas, "groups": feature_groups})
+        features.append({"id": feature, "alphas": alphas, "groups": feature_groups,
+                         "sheetColumns": sheet_columns, "sheetCell": 256})
 
+    if not features:
+        raise RuntimeError(f"No complete 12-group sweeps found under {FEATURE_ROOT}")
     demo_sweep = {"features": features,
                   "imageNote": "Portraits show seed 0; metrics are means across 20 seeds per group."}
     (OUT / "data").mkdir(exist_ok=True)
