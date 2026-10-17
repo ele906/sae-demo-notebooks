@@ -14,6 +14,9 @@ See the [static SAE Explorer](demo/) for a browser-based feature activation and 
 - [`sae-activation/compare_biased_unbiased_mean_activations.ipynb`](sae-activation/compare_biased_unbiased_mean_activations.ipynb): generate matched comparisons for both prompt datasets, saved in separate `biased/` and `unbiased/` result folders.
 - [`sae-activation/activation_tuning/feature_138_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_138_biased_dataset_alpha_sweep.ipynb): intervene on feature 138 in the original biased dataset images, replaying each image's saved simple prompt and seed across 19 alpha values.
 - [`sae-activation/activation_tuning/feature_3884_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_3884_biased_dataset_alpha_sweep.ipynb): intervene on feature 3884 across all 12 biased race/gender groups, using 20 images per group and a symmetric 19-value alpha sweep.
+- [`sae-activation/activation_tuning/feature_3279_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_3279_biased_dataset_alpha_sweep.ipynb): feature 3279 across 12 biased race/gender groups (20 seeds each), with 23 signed alpha values and 4×6 image/overlay sheets.
+- [`sae-activation/activation_tuning/feature_452_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_452_biased_dataset_alpha_sweep.ipynb): same biased-dataset sweep and signed overlay setup for feature 452.
+- [`sae-activation/activation_tuning/feature_527_biased_dataset_alpha_sweep.ipynb`](sae-activation/activation_tuning/feature_527_biased_dataset_alpha_sweep.ipynb): same biased-dataset sweep and signed overlay setup for feature 527.
 - [`sae-tuning/fine_tune_box_sae.ipynb`](sae-tuning/fine_tune_box_sae.ipynb): configure and launch the existing C2C box-supervised SAE fine-tuning script.
 - [`sae-feature-suppression/suppress_features.ipynb`](sae-feature-suppression/suppress_features.ipynb): configure and launch the existing feature-ablation comparison, including no-op strengths and a random control.
 
@@ -36,3 +39,5 @@ Feature 3884 tuning uses the first 20 original seeds in each of the 12 biased ra
 Run the SAE notebooks with the debiasing environment and local artifacts ready. The activation notebook uses a CUDA GPU; the tuning and suppression notebooks start their existing Python scripts in the notebook kernel when you click their run buttons, so open those notebooks from a GPU allocation. They do not automatically submit jobs to Slurm.
 
 All notebook outputs are cleared before commit. Run output folders and local model/data artifacts are ignored by Git.
+
+Feature 3279, 452, and 527 use alpha values `-120, -100, -75, -50, -30, -20, -15, -10, -7, -5, -3, 0, 3, 5, 7, 10, 15, 20, 30, 50, 75, 100, 120`. Each 4×6 sheet shows the original followed by all 23 alpha variants in ascending order. The feature 3279 run and the 452/527 runs are being published under `cos398/tuning_activations/feature_<id>/`.
