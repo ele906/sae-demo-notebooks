@@ -112,8 +112,12 @@ def completed_sweep_runs():
                     metric_rows = list(csv.DictReader(handle))
                 if len(metric_rows) != len(GROUPS) * len(alphas):
                     continue
-                if any(not (run / group / "seed_sheets" / f"{group}_seed0.jpg").is_file()
-                       for group in expected_groups):
+                if any(
+                    not (run / "images" / group / "baseline" / "seed000.png").is_file()
+                    or any(not (run / "images" / group / f"seed000_alpha_{alpha_slug(a)}.png").is_file()
+                           for a in alphas)
+                    for group in expected_groups
+                ):
                     continue
                 with np.load(run / "activation_maps.npz", allow_pickle=False) as maps:
                     keys = [str(key) for key in maps["map_keys"]]
@@ -157,42 +161,41 @@ def export_sweep():
             feature_groups = []
             sheet_columns = None
             for group, label in GROUPS:
-                sheet_path = run / group / "seed_sheets" / f"{group}_seed0.jpg"
-                with Image.open(sheet_path) as sheet:
-                    source_cell, top = 384, 30
-                    cell = 256
-                    cols = sheet.width // source_cell
-                    if sheet.width % source_cell or cols not in (5, 6):
-                        raise ValueError(f"Unexpected seed sheet dimensions for feature {feature}: {sheet.size}")
-                    sheet_columns = cols
-                    ntiles = len(alphas) + 1
-                    rows = (ntiles + cols - 1) // cols
-                    plain = Image.new("RGB", (cols * cell, rows * cell), "white")
-                    jet_sheet = Image.new("RGB", (cols * cell, rows * cell), "white")
-                    map_index = keys.index(f"{group}|0")
-                    for tile_index in range(ntiles):
-                        row, col = divmod(tile_index, cols)
-                        x0, y0 = col * source_cell, row * (source_cell + top)
-                        base = sheet.crop((x0, y0 + top, x0 + source_cell, y0 + top + source_cell)).convert("RGB")
-                        base = base.resize((cell, cell), Image.Resampling.LANCZOS)
-                        plain.paste(base, (col * cell, row * cell))
-                        values = pre_maps[map_index] if tile_index == 0 else post_maps[map_index, tile_index - 1]
-                        if tile_index > 0 and alphas[tile_index - 1] == 0:
-                            values = pre_maps[map_index]
-                        values = np.asarray(values, dtype=np.float32)
-                        finite = values[np.isfinite(values)]
-                        vmax = max(float(np.percentile(finite, 99.5)) if finite.size else 0.0, 1e-8)
-                        normalized = np.clip(values / vmax, 0, 1)
-                        colors = (np.nan_to_num(__import__("matplotlib").colormaps["jet"](normalized)[..., :3]) * 255).astype(np.uint8)
-                        opacity = (np.power(normalized, 0.65) * 210).clip(0, 210)
-                        color_img = Image.fromarray(colors, "RGB").resize((cell, cell), Image.Resampling.NEAREST)
-                        opacity_img = Image.fromarray(opacity.astype(np.uint8), "L").resize((cell, cell), Image.Resampling.NEAREST)
-                        color_pixels = np.asarray(color_img, dtype=np.float32)
-                        opacity_pixels = np.asarray(opacity_img, dtype=np.float32)[..., None] / 255.0
-                        heat = Image.fromarray(np.uint8(np.clip(color_pixels * opacity_pixels + np.asarray(base) * (1 - opacity_pixels), 0, 255)), "RGB")
-                        jet_sheet.paste(heat, (col * cell, row * cell))
-                    plain.save(asset_root / f"{group}-images.jpg", quality=86, optimize=True)
-                    jet_sheet.save(asset_root / f"{group}-jet.jpg", quality=86, optimize=True)
+                cell = 256
+                ntiles = len(alphas) + 1
+                cols = 5 if ntiles <= 20 else 6
+                sheet_columns = cols
+                rows = (ntiles + cols - 1) // cols
+                plain = Image.new("RGB", (cols * cell, rows * cell), "white")
+                jet_sheet = Image.new("RGB", (cols * cell, rows * cell), "white")
+                map_index = keys.index(f"{group}|0")
+                sweep_maps = np.concatenate((pre_maps[map_index][None], post_maps[map_index]), axis=0)
+                finite_sweep = sweep_maps[np.isfinite(sweep_maps)]
+                shared_vmax = max(float(np.percentile(finite_sweep, 99.5)) if finite_sweep.size else 0.0, 1e-8)
+                for tile_index in range(ntiles):
+                    row, col = divmod(tile_index, cols)
+                    if tile_index == 0:
+                        source_path = run / "images" / group / "baseline" / "seed000.png"
+                        values = pre_maps[map_index]
+                    else:
+                        alpha = alphas[tile_index - 1]
+                        source_path = run / "images" / group / f"seed000_alpha_{alpha_slug(alpha)}.png"
+                        values = post_maps[map_index, tile_index - 1]
+                    with Image.open(source_path) as source:
+                        base = source.convert("RGB").resize((cell, cell), Image.Resampling.LANCZOS)
+                    plain.paste(base, (col * cell, row * cell))
+                    values = np.asarray(values, dtype=np.float32)
+                    normalized = np.clip(values / shared_vmax, 0, 1)
+                    colors = (np.nan_to_num(__import__("matplotlib").colormaps["jet"](normalized)[..., :3]) * 255).astype(np.uint8)
+                    opacity = (np.power(normalized, 0.65) * 210).clip(0, 210)
+                    color_img = Image.fromarray(colors, "RGB").resize((cell, cell), Image.Resampling.NEAREST)
+                    opacity_img = Image.fromarray(opacity.astype(np.uint8), "L").resize((cell, cell), Image.Resampling.NEAREST)
+                    color_pixels = np.asarray(color_img, dtype=np.float32)
+                    opacity_pixels = np.asarray(opacity_img, dtype=np.float32)[..., None] / 255.0
+                    heat = Image.fromarray(np.uint8(np.clip(color_pixels * opacity_pixels + np.asarray(base) * (1 - opacity_pixels), 0, 255)), "RGB")
+                    jet_sheet.paste(heat, (col * cell, row * cell))
+                plain.save(asset_root / f"{group}-images.jpg", quality=86, optimize=True)
+                jet_sheet.save(asset_root / f"{group}-jet.jpg", quality=86, optimize=True)
 
                 rows_for_group = by_group[group]
                 baseline = {
